@@ -8,12 +8,23 @@
         temporibus aliquid autem ipsam ducimus magnam porro.
       </v-responsive>
     </section>
+    <Paintings :listPictures="shopListPaintings" />
   </v-container>
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 export default {
-  name: 'Shop'
+  name: 'Shop',
+  components: {
+    Paintings: () => import('@/components/Paintings')
+  },
+  computed: {
+    ...mapGetters(['filteredPaintings']),
+    shopListPaintings() {
+      return this.filteredPaintings.filter((value) => value.price.split(' ')[0] === '€')
+    }
+  }
 }
 </script>
 

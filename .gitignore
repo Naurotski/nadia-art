@@ -1,7 +1,16 @@
 .DS_Store
 node_modules
 /dist
-
+.firebase
+hosting.ZGlzdA.cache
+firebaseConfig.js
+pk_live.js
+.firebaserc
+database.rules.json
+firebase.json
+firestore.indexes.json
+firestore.rules
+storage.rules
 
 # local env files
 .env.local
@@ -21,3 +30,6 @@ pnpm-debug.log*
 *.njsproj
 *.sln
 *.sw?
+
+/.firebase/
+liveStripe

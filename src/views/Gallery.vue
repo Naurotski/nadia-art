@@ -8,12 +8,20 @@
         temporibus aliquid autem ipsam ducimus magnam porro.
       </v-responsive>
     </section>
+    <Paintings :listPictures="filteredPaintings" />
   </v-container>
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 export default {
-  name: 'Gallery'
+  name: 'Gallery',
+  components: {
+    Paintings: () => import('@/components/Paintings')
+  },
+  computed: {
+    ...mapGetters(['filteredPaintings'])
+  }
 }
 </script>
 

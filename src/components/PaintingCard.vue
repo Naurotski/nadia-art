@@ -1,7 +1,7 @@
 <template>
   <v-hover>
     <template v-slot="{ hover }">
-      <v-card @click="() => {}" v-on="$listeners">
+      <v-card>
         <v-img
           :class="{
             'v-image--hovered': hover
@@ -9,12 +9,6 @@
           :src="src"
           height="350"
         />
-
-        <v-overlay :opacity="0.8" :value="hover" absolute z-index="0">
-          <v-fade-transition appear>
-            <v-icon size="88" color="#FFFFFFE6"> mdi-fullscreen </v-icon>
-          </v-fade-transition>
-        </v-overlay>
       </v-card>
     </template>
   </v-hover>
@@ -23,9 +17,6 @@
 <script>
 export default {
   name: 'GalleryCard',
-
-  inheritAttrs: false,
-
   props: {
     src: {
       type: String,

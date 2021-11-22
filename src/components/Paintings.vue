@@ -1,37 +1,42 @@
 <template>
   <div v-scroll="onScroll" class="v-gallery">
-    <!--    <v-filter />-->
-
+    <v-filter />
     <v-container :fluid="!isScrolling" class="transition-swing">
       <v-row :no-gutters="!isScrolling" class="transition-swing mx-n4">
         <v-col
-          v-for="(pic, i) in paginatedPictures"
-          :key="pic.src"
+          v-for="pic in paginatedPictures"
+          :key="pic.imageSrc"
           cols="12"
           md="4"
           class="transition-swing"
         >
-          <painting-card :src="pic.src" @click.stop="setPicture(i)" />
+          <router-link :to="`/painting/${pic.id}`">
+            <painting-card :src="pic.imageSrc" />
+          </router-link>
         </v-col>
       </v-row>
     </v-container>
-
     <v-responsive
-      v-if="paginatedPictures.length < pictures.length"
+      v-if="paginatedPictures.length < listPictures.length"
       class="white py-12 mx-n3 text-center"
     >
       <v-btn text @click="page++"> Load More Works </v-btn>
     </v-responsive>
-
-    <!--    <gallery-carousel v-model="dialog" />-->
   </div>
 </template>
 <script>
-import { mapState, mapGetters } from 'vuex'
+import { mapState, mapActions } from 'vuex'
 export default {
   name: 'Gallery',
+  props: {
+    listPictures: {
+      type: Array,
+      required: true
+    }
+  },
   components: {
-    PaintingCard: () => import('@/components/PaintingCard')
+    PaintingCard: () => import('@/components/PaintingCard'),
+    VFilter: () => import('@/components/Filter')
   },
   data: () => ({
     dialog: false,
@@ -39,18 +44,20 @@ export default {
     page: 1
   }),
   computed: {
-    ...mapState(['filter', 'picture']),
-    ...mapGetters(['pictures']),
-    filteredPictures() {
-      return this.filter === 'All'
-        ? this.pictures
-        : this.pictures.filter((p) => p.category === this.filter)
-    },
+    ...mapState(['filter', 'picture', 'paintings']),
     paginatedPictures() {
-      return this.filteredPictures.slice(0, this.page * 12)
+      return this.listPictures.slice(0, this.page * 12)
+    }
+  },
+  created() {
+    if (!this.listPictures.length) {
+      this.fetchPaintings()
     }
   },
   methods: {
+    ...mapActions({
+      fetchPaintings: 'fetchPaintings'
+    }),
     onScroll() {
       this.isScrolling = window.pageYOffset > 50
     },
