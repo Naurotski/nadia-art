@@ -1,8 +1,9 @@
 <template>
-  <transition appear name="fadeGroup" mode="out-in">
-    <v-img class="studios" :src="backgroundUrl" :key="backgroundUrl"></v-img>
-  </transition>
-
+  <div style="height: 100vh">
+    <transition appear name="fadeGroup" mode="out-in">
+      <v-img class="studios" :src="backgroundUrl" :key="backgroundUrl"></v-img>
+    </transition>
+  </div>
   <!--  <v-container  fluid>-->
   <!--    id="home" class="pt-12 pb-0 px-0"  tag="section"-->
   <!--    <section id="intro" class="text-center mb-12">-->
@@ -23,7 +24,8 @@ export default {
   data: () => ({
     painting: null,
     timer: null,
-    backgroundUrl: null
+    backgroundUrl:
+      'https://firebasestorage.googleapis.com/v0/b/first-project-6daea.appspot.com/o/paintinds%2F-LwVO3RdQAoakK_Me6z5?alt=media&token=d702f715-0cca-4e23-bf94-98c897cc908a'
   }),
   computed: {
     ...mapState(['paintings']),
@@ -32,12 +34,8 @@ export default {
     }
   },
   created() {
-    if (!this.paintings.length) {
-      this.getPaintings().then(() => (this.backgroundUrl = this.carouselFilter[0].imageSrc))
-    } else {
-      this.backgroundUrl = this.carouselFilter[0].imageSrc
-    }
-    let counter = 0
+    if (!this.paintings.length) this.getPaintings()
+    let counter = -1
     this.timer = setInterval(() => {
       this.$forceUpdate()
       if (++counter >= this.carouselFilter.length) counter = 0
@@ -55,7 +53,6 @@ export default {
 <style scoped lang="sass">
 .studios
   position: fixed
-  background-size: cover
   height: 100%
   width: 100%
 .fadeGroup-enter-active, .fadeGroup-leave-active
