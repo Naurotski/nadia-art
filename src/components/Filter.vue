@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <div class="text-center pa-3">
+  <v-container fluid>
+    <div class="text-center">
       <v-btn icon @click="showTabs = !showTabs">
         <v-icon>mdi-view-grid</v-icon>
       </v-btn>
@@ -19,7 +19,7 @@
         </v-btn>
       </div>
     </v-expand-transition>
-  </div>
+  </v-container>
 </template>
 
 <script>
@@ -28,8 +28,7 @@ export default {
   name: 'VFilter',
 
   data: () => ({
-    showTabs: true,
-    fff: 'All'
+    showTabs: true
   }),
 
   computed: {

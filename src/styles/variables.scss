@@ -9,3 +9,10 @@ $border-radius-root: 0;
 .v-btn {
   @include elevation(0);
 }
+.fadeGroup-enter-active, .fadeGroup-leave-active {
+  transition: opacity 2s
+}
+.fadeGroup-enter, .fadeGroup-leave-to{
+  opacity: 0
+}
+

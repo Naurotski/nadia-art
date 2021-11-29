@@ -1,40 +1,38 @@
 <template>
   <v-container id="about" class="pa-0" fluid tag="section">
-    <v-row class="ma-0" no-gutters>
-      <v-col cols="12" md="6">
-        <v-img
-          height="calc(100vh - 96px - 156px)"
-          gradient="to top, rgba(0, 0, 0, .0), rgba(0, 0, 0, .0)"
-          :src="require('@/assets/sito.jpg')"
-        />
-      </v-col>
-
-      <v-col class="d-block d-md-flex align-center grey lighten-3 pa-6" cols="12" md="6">
-        <v-responsive class="mx-auto px-3 px-md-12" max-width="750">
-          <h1
-            style="color: black; white-space: pre-line"
-            class="mb-6"
-            :class="$vuetify.breakpoint.mdAndUp ? 'display-2' : 'display-1'"
-          >
-            Hi! I'm Naurotskaya Nadzeya.<br />
-            Creative Photography
-          </h1>
-
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur recusandae esse,
-            vel commodi rem similique totam quis, corrupti rerum veritatis numquam ipsa, nam
-            explicabo nulla! Accusamus deserunt repellendus perspiciatis nulla.
-          </p>
-
-          <p>
-            Nulla, porro? Quos architecto vero itaque temporibus in illo nam perferendis ex nemo
-            distinctio?
-          </p>
-
-          <div class="signature">Naurotskaya Nadzeya</div>
-        </v-responsive>
-      </v-col>
-    </v-row>
+    <transition appear name="fadeGroup" mode="out-in">
+      <v-row class="ma-0" no-gutters>
+        <v-col cols="12" md="6">
+          <v-img
+            height="calc(100vh - 96px - 156px)"
+            gradient="to top, rgba(0, 0, 0, .0), rgba(0, 0, 0, .0)"
+            :src="require('@/assets/sito.jpg')"
+          />
+        </v-col>
+        <v-col class="d-block d-md-flex align-center grey lighten-3 pa-6" cols="12" md="6">
+          <v-responsive class="mx-auto px-3 px-md-12" max-width="750">
+            <h1
+              style="color: black; white-space: pre-line"
+              class="mb-6"
+              :class="$vuetify.breakpoint.mdAndUp ? 'display-2' : 'display-1'"
+            >
+              Hi! I'm Naurotskaya Nadzeya.<br />
+              Creative Photography
+            </h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur recusandae esse,
+              vel commodi rem similique totam quis, corrupti rerum veritatis numquam ipsa, nam
+              explicabo nulla! Accusamus deserunt repellendus perspiciatis nulla.
+            </p>
+            <p>
+              Nulla, porro? Quos architecto vero itaque temporibus in illo nam perferendis ex nemo
+              distinctio?
+            </p>
+            <div class="signature">Naurotskaya Nadzeya</div>
+          </v-responsive>
+        </v-col>
+      </v-row>
+    </transition>
   </v-container>
 </template>
 <script>

@@ -34,7 +34,8 @@ const routes = [
     name: 'Painting',
     props: true,
     component: () => import('@/views/Painting.vue')
-  }
+  },
+  { path: '/:pathMatch(.*)*', name: 'NotFound', component: () => import('@/views/NotFound') }
 ]
 
 const router = new VueRouter({

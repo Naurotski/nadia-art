@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import { initializeApp } from 'firebase/app'
 import firebaseConfig from '@/firebaseConfig'
-import { getDatabase, ref, onValue, get } from 'firebase/database'
+import { getDatabase, ref, onValue } from 'firebase/database'
 
 Vue.use(Vuex)
 initializeApp(firebaseConfig)
@@ -63,33 +63,34 @@ export default new Vuex.Store({
               id: key
             })
           })
+          commit('fetchPaintings', resultPaintings)
         })
-        commit('fetchPaintings', resultPaintings)
       } catch (error) {
         commit('setError', error.message)
         throw error
       }
     },
-    async getPaintings({ commit }) {
-      commit('clearError')
-      try {
-        const resultPaintings = []
-        const paintingsRef = await ref(db, 'paintings')
-        const snapshot = await get(paintingsRef)
-        const paintings = snapshot.val()
-        Object.keys(paintings).forEach((key) => {
-          const painting = paintings[key]
-          resultPaintings.push({
-            ...painting,
-            id: key
-          })
-        })
-        commit('fetchPaintings', resultPaintings)
-      } catch (error) {
-        commit('setError', error.message)
-        throw error
-      }
-    },
+    // async getPaintings({ commit }) {
+    //   console.log('getPaintings')
+    //   commit('clearError')
+    //   try {
+    //     const resultPaintings = []
+    //     const paintingsRef = await ref(db, 'paintings')
+    //     const snapshot = await get(paintingsRef)
+    //     const paintings = snapshot.val()
+    //     Object.keys(paintings).forEach((key) => {
+    //       const painting = paintings[key]
+    //       resultPaintings.push({
+    //         ...painting,
+    //         id: key
+    //       })
+    //     })
+    //     commit('fetchPaintings', resultPaintings)
+    //   } catch (error) {
+    //     commit('setError', error.message)
+    //     throw error
+    //   }
+    // },
     async payStripePictures({ commit }, paymentDetails) {
       console.log(paymentDetails)
       commit('clearError')

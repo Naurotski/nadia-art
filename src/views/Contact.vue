@@ -12,58 +12,59 @@
       style="border: 0"
       width="100%"
     />
+    <transition appear name="fadeGroup" mode="out-in">
+      <v-row class="ma-0" justify="center">
+        <v-col cols="12" md="4">
+          <h1 class="display-1 mb-8 font-weight-bold">Contact Info:</h1>
 
-    <v-row class="ma-0" justify="center">
-      <v-col cols="12" md="4">
-        <h1 class="display-1 mb-8 font-weight-bold">Contact Info:</h1>
+          <div class="mb-8">
+            Praesent interdum congue mauris, et fringilla lacus pel vitae. Quisque nisl mauris,
+            aliquam eu ultrices vel, conse vitae sapien at imperdiet risus. Quisque cursus risus id.
+            fermentum, in auctor quam consectetur.
+          </div>
 
-        <div class="mb-8">
-          Praesent interdum congue mauris, et fringilla lacus pel vitae. Quisque nisl mauris,
-          aliquam eu ultrices vel, conse vitae sapien at imperdiet risus. Quisque cursus risus id.
-          fermentum, in auctor quam consectetur.
-        </div>
+          <div class="mb-4"><strong>Address</strong> 56010 Ghezzano PI, via Petrarca, 17</div>
 
-        <div class="mb-4"><strong>Address</strong> 56010 Ghezzano PI, via Petrarca, 17</div>
+          <div class="mb-4"><strong>Phone</strong> +39 392 5568834</div>
 
-        <div class="mb-4"><strong>Phone</strong> +39 392 5568834</div>
+          <div class="mb-4"><strong>Email</strong> naurotskaya.art@gmail.com</div>
+        </v-col>
 
-        <div class="mb-4"><strong>Email</strong> naurotskaya.art@gmail.com</div>
-      </v-col>
+        <v-col cols="12" md="5">
+          <v-form>
+            <v-row class="mb-6">
+              <v-col cols="12" md="6">
+                <v-sheet>
+                  <v-text-field flat hide-details label="Your Name" solo />
+                </v-sheet>
+              </v-col>
 
-      <v-col cols="12" md="5">
-        <v-form>
-          <v-row class="mb-6">
-            <v-col cols="12" md="6">
-              <v-sheet>
-                <v-text-field flat hide-details label="Your Name" solo />
-              </v-sheet>
-            </v-col>
+              <v-col cols="12" md="6">
+                <v-sheet>
+                  <v-text-field flat hide-details label="Your Email" solo />
+                </v-sheet>
+              </v-col>
 
-            <v-col cols="12" md="6">
-              <v-sheet>
-                <v-text-field flat hide-details label="Your Email" solo />
-              </v-sheet>
-            </v-col>
+              <v-col cols="12">
+                <v-sheet>
+                  <v-text-field flat hide-details label="Your Title" solo />
+                </v-sheet>
+              </v-col>
 
-            <v-col cols="12">
-              <v-sheet>
-                <v-text-field flat hide-details label="Your Title" solo />
-              </v-sheet>
-            </v-col>
+              <v-col cols="12">
+                <v-sheet>
+                  <v-textarea flat hide-details label="Your Message" solo />
+                </v-sheet>
+              </v-col>
+            </v-row>
 
-            <v-col cols="12">
-              <v-sheet>
-                <v-textarea flat hide-details label="Your Message" solo />
-              </v-sheet>
-            </v-col>
-          </v-row>
-
-          <v-btn :block="$vuetify.breakpoint.smAndDown" class="white--text" color="black" x-large>
-            Send Message
-          </v-btn>
-        </v-form>
-      </v-col>
-    </v-row>
+            <v-btn :block="$vuetify.breakpoint.smAndDown" class="white--text" color="black" x-large>
+              Send Message
+            </v-btn>
+          </v-form>
+        </v-col>
+      </v-row>
+    </transition>
   </v-container>
 </template>
 

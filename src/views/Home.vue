@@ -34,7 +34,7 @@ export default {
     }
   },
   created() {
-    if (!this.paintings.length) this.getPaintings()
+    if (!this.paintings.length) this.fetchPaintings()
     let counter = -1
     this.timer = setInterval(() => {
       this.$forceUpdate()
@@ -46,7 +46,7 @@ export default {
     clearInterval(this.timer)
   },
   methods: {
-    ...mapActions(['getPaintings'])
+    ...mapActions(['fetchPaintings'])
   }
 }
 </script>
@@ -55,8 +55,4 @@ export default {
   position: fixed
   height: 100%
   width: 100%
-.fadeGroup-enter-active, .fadeGroup-leave-active
-  transition: opacity 2s
-.fadeGroup-enter, .fadeGroup-leave-to
-  opacity: 0
 </style>
