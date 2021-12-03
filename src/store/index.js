@@ -3,6 +3,7 @@ import Vuex from 'vuex'
 import { initializeApp } from 'firebase/app'
 import firebaseConfig from '@/firebaseConfig'
 import { getDatabase, ref, onValue } from 'firebase/database'
+import axios from 'axios'
 
 Vue.use(Vuex)
 initializeApp(firebaseConfig)
@@ -20,12 +21,16 @@ export default new Vuex.Store({
       'cityLandscapes',
       'portraits',
       'stillLifes',
-      'different'
+      'different',
+      'test'
     ],
     filter: 'All',
-    error: null
+    error: null,
+    loading: false,
+    url: 'https://metamorfosi.herokuapp.com'
   },
   getters: {
+    url: (state) => state.url,
     filteredPaintings: (state) => {
       return state.filter === 'All'
         ? state.paintings
@@ -46,15 +51,16 @@ export default new Vuex.Store({
     },
     changeFilter: (state, category) => (state.filter = category),
     setError: (state, payload) => (state.error = payload),
-    clearError: (state) => (state.error = null)
+    clearError: (state) => (state.error = null),
+    setLoading: (state, payload) => (state.loading = payload)
   },
   actions: {
     async fetchPaintings({ commit }) {
       commit('clearError')
       try {
-        const resultPaintings = []
         const paintingsRef = await ref(db, 'paintings')
         await onValue(paintingsRef, (snapshot) => {
+          const resultPaintings = []
           const paintings = snapshot.val()
           Object.keys(paintings).forEach((key) => {
             const painting = paintings[key]
@@ -70,27 +76,6 @@ export default new Vuex.Store({
         throw error
       }
     },
-    // async getPaintings({ commit }) {
-    //   console.log('getPaintings')
-    //   commit('clearError')
-    //   try {
-    //     const resultPaintings = []
-    //     const paintingsRef = await ref(db, 'paintings')
-    //     const snapshot = await get(paintingsRef)
-    //     const paintings = snapshot.val()
-    //     Object.keys(paintings).forEach((key) => {
-    //       const painting = paintings[key]
-    //       resultPaintings.push({
-    //         ...painting,
-    //         id: key
-    //       })
-    //     })
-    //     commit('fetchPaintings', resultPaintings)
-    //   } catch (error) {
-    //     commit('setError', error.message)
-    //     throw error
-    //   }
-    // },
     async payStripePictures({ commit }, paymentDetails) {
       console.log(paymentDetails)
       commit('clearError')
@@ -105,6 +90,20 @@ export default new Vuex.Store({
       //   commit('setError', error.message)
       //   throw error
       // }
+    },
+    async nodeMailer({ commit, getters }, { userName, userEmail, subject, text }) {
+      commit('clearError')
+      try {
+        return await axios.post(`${getters.url}/nadiaArt/nodemailer`, {
+          userName,
+          userEmail,
+          subject,
+          text
+        })
+      } catch (error) {
+        commit('setError', error.message)
+        throw error
+      }
     }
   }
 })

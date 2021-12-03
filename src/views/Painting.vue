@@ -40,13 +40,13 @@
           </v-card-actions>
         </v-col>
         <v-col cols="12" sm="4" md="4">
-          <v-card-title style="word-break: normal" v-text="painting.titleEn" />
+          <v-card-title style="word-break: normal" v-text="painting.title" />
           <v-card-text>
-            <h3 v-text="painting.priceEn" />
+            <h3 v-text="painting.price" />
           </v-card-text>
           <v-card-text>
-            <p v-text="painting.descriptionEn" />
-            <p v-text="painting.description2En" />
+            <p v-text="painting.description" />
+            <p v-text="painting.description2" />
           </v-card-text>
           <dialogue-payment-pictures
             v-if="painting.printPrice"
@@ -70,7 +70,7 @@
             <dialogue-payment-pictures
               v-if="presencePrice"
               :painting="painting"
-              :price="painting.priceEn"
+              :price="painting.price"
               :goods="`pictures`"
             />
           </v-card-actions>

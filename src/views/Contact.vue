@@ -31,37 +31,71 @@
         </v-col>
 
         <v-col cols="12" md="5">
-          <v-form>
+          <v-form ref="form" v-model="valid" validation>
             <v-row class="mb-6">
               <v-col cols="12" md="6">
                 <v-sheet>
-                  <v-text-field flat hide-details label="Your Name" solo />
+                  <v-text-field
+                    v-model="userName"
+                    flat
+                    label="Your Name"
+                    type="text"
+                    solo
+                    :rules="userDataRules"
+                  />
                 </v-sheet>
               </v-col>
 
               <v-col cols="12" md="6">
                 <v-sheet>
-                  <v-text-field flat hide-details label="Your Email" solo />
+                  <v-text-field
+                    v-model="userEmail"
+                    flat
+                    label="Your Email"
+                    solo
+                    type="email"
+                    :rules="emailRules"
+                  />
                 </v-sheet>
               </v-col>
 
               <v-col cols="12">
                 <v-sheet>
-                  <v-text-field flat hide-details label="Your Title" solo />
+                  <v-text-field
+                    v-model="subject"
+                    flat
+                    label="Your Title"
+                    solo
+                    type="text"
+                    :rules="titleRules"
+                  />
                 </v-sheet>
               </v-col>
 
               <v-col cols="12">
                 <v-sheet>
-                  <v-textarea flat hide-details label="Your Message" solo />
+                  <v-textarea v-model="text" flat label="Your Message" solo :rules="dialogRules" />
                 </v-sheet>
               </v-col>
             </v-row>
 
-            <v-btn :block="$vuetify.breakpoint.smAndDown" class="white--text" color="black" x-large>
+            <v-btn
+              @click="sendMessage"
+              :disabled="!valid"
+              :loading="loading"
+              :block="$vuetify.breakpoint.smAndDown"
+              class="white--text"
+              color="black"
+              x-large
+            >
               Send Message
             </v-btn>
           </v-form>
+          <v-overlay :absolute="absolute" :opacity="opacity" :value="overlay">
+            <v-btn text color="orange lighten-2" @click="overlay = false">
+              Ваше письмо отправлено
+            </v-btn>
+          </v-overlay>
         </v-col>
       </v-row>
     </transition>
@@ -69,9 +103,68 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
-  name: 'Contact'
+  name: 'Contact',
+  data: () => ({
+    valid: false,
+    userName: '',
+    userEmail: '',
+    subject: '',
+    text: '',
+    overlay: false,
+    absolute: true,
+    opacity: 0.8,
+    userDataRules: [
+      (v) => !!v || 'Your Name is required',
+      (v) => v.length <= 30 || 'Not more than 30 characters'
+    ],
+    emailRules: [
+      (v) => !!v || 'Email is required',
+      (v) => /.+@.+\..+/.test(v) || 'Email must be valid',
+      (v) => v.length < 31 || 'Not more than 30 characters'
+    ],
+    titleRules: [
+      (v) => !!v || 'Your Title is required',
+      (v) => v.length <= 100 || 'Not more than 100 characters'
+    ],
+    dialogRules: [
+      (v) => !!v || 'Message is required',
+      (v) => (v && v.length >= 3) || 'At least 3 characters ',
+      (v) => (v && v.length <= 2000) || 'Not more than 5000 characters'
+    ]
+  }),
+  computed: {
+    ...mapState(['loading'])
+  },
+  methods: {
+    sendMessage() {
+      if (this.valid) {
+        this.$store
+          .dispatch('nodeMailer', {
+            userName: this.userName,
+            userEmail: this.userEmail,
+            subject: this.subject,
+            text: this.text
+          })
+          .then((result) => {
+            if (result.status === 200) {
+              console.log(result)
+              this.userName = ''
+              this.userEmail = ''
+              this.subject = ''
+              this.text = ''
+              this.overlay = !this.overlay
+            } else {
+              this.overlay = !this.overlay
+              console.log(result)
+            }
+          })
+      }
+    }
+  }
 }
 </script>
 
-<style scoped></style>
+<style scoped />
