@@ -92,9 +92,7 @@
             </v-btn>
           </v-form>
           <v-overlay :absolute="absolute" :opacity="opacity" :value="overlay">
-            <v-btn text color="orange lighten-2" @click="overlay = false">
-              Ваше письмо отправлено
-            </v-btn>
+            <v-btn text color="orange lighten-2" @click="overlay = false"> Message sent </v-btn>
           </v-overlay>
         </v-col>
       </v-row>

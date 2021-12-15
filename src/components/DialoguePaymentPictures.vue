@@ -1,5 +1,5 @@
 <template>
-  <v-dialog v-model="dialog" persistent max-width="500px">
+  <v-dialog v-model="dialog" persistent max-width="800px">
     <template v-slot:activator="{ on }">
       <slot :on="on" name="button"
         ><v-btn :x-small="$vuetify.breakpoint.xs" text color="red" v-on="on">buy</v-btn></slot
@@ -50,7 +50,7 @@
                   class="purple-input"
                   type="email"
                   counter
-                  :rules="userDataRules"
+                  :rules="emailRules"
                 />
               </v-col>
               <v-col cols="12" sm="6" md="4">
@@ -162,7 +162,20 @@ export default {
       postalCode: '',
       phone: ''
     },
-    userDataRules: [(v) => !!v || 'Введите данные', (v) => v.length <= 30 || 'Hе более 30 символов']
+    userDataRules: [
+      (v) => !!v || 'Your Name is required',
+      (v) => v.length <= 30 || 'Not more than 30 characters'
+    ],
+    emailRules: [
+      (v) => !!v || 'Email is required',
+      // (v) => /.+@.+\..+/.test(v) || 'Email must be valid',
+      (v) => v.length < 31 || 'Not more than 30 characters',
+      (v) => {
+        const pattern =
+          /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+        return pattern.test(v) || 'Invalid e-mail.'
+      }
+    ]
   }),
   methods: {
     payStripe() {

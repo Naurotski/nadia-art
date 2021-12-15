@@ -14,16 +14,7 @@ export default new Vuex.Store({
     drawer: false,
     links: ['Home', 'About me', 'Gallery', 'Shop', 'Contact'],
     paintings: [],
-    categories: [
-      'All',
-      'artObjects',
-      'landscape',
-      'cityLandscapes',
-      'portraits',
-      'stillLifes',
-      'different',
-      'test'
-    ],
+    categories: ['All', 'Life Captured', 'Between the Worlds', 'Beyond Reality'],
     filter: 'All',
     error: null,
     loading: false,
