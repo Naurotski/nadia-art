@@ -101,7 +101,7 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapState, mapMutations, mapActions } from 'vuex'
 
 export default {
   name: 'Contact',
@@ -137,28 +137,27 @@ export default {
     ...mapState(['loading'])
   },
   methods: {
+    ...mapMutations(['setLoading']),
+    ...mapActions(['nodeMailer']),
     sendMessage() {
       if (this.valid) {
-        this.$store
-          .dispatch('nodeMailer', {
-            userName: this.userName,
-            userEmail: this.userEmail,
-            subject: this.subject,
-            text: this.text
-          })
-          .then((result) => {
-            if (result.status === 200) {
-              console.log(result)
-              this.userName = ''
-              this.userEmail = ''
-              this.subject = ''
-              this.text = ''
-              this.overlay = !this.overlay
-            } else {
-              this.overlay = !this.overlay
-              console.log(result)
-            }
-          })
+        this.nodeMailer({
+          userName: this.userName,
+          userEmail: this.userEmail,
+          subject: this.subject,
+          text: this.text
+        }).then((result) => {
+          this.setLoading(false)
+          if (result.status === 200) {
+            this.userName = ''
+            this.userEmail = ''
+            this.subject = ''
+            this.text = ''
+            this.overlay = !this.overlay
+          } else {
+            this.overlay = !this.overlay
+          }
+        })
       }
     }
   }

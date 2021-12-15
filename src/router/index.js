@@ -35,6 +35,12 @@ const routes = [
     props: true,
     component: () => import('@/views/Painting.vue')
   },
+  {
+    path: '/thankYou/:id',
+    name: 'ThankYou',
+    props: true,
+    component: () => import('@/views/ThankYou')
+  },
   { path: '/:pathMatch(.*)*', name: 'NotFound', component: () => import('@/views/NotFound') }
 ]
 

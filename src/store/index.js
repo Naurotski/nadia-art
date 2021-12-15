@@ -4,6 +4,7 @@ import { initializeApp } from 'firebase/app'
 import firebaseConfig from '@/firebaseConfig'
 import { getDatabase, ref, onValue } from 'firebase/database'
 import axios from 'axios'
+import stripe from '@/pk_live'
 
 Vue.use(Vuex)
 initializeApp(firebaseConfig)
@@ -18,7 +19,8 @@ export default new Vuex.Store({
     filter: 'All',
     error: null,
     loading: false,
-    url: 'https://metamorfosi.herokuapp.com'
+    // urlHeroku: 'https://metamorfosi.herokuapp.com'
+    urlHeroku: 'http://localhost:3000'
   },
   getters: {
     url: (state) => state.url,
@@ -48,6 +50,7 @@ export default new Vuex.Store({
   actions: {
     async fetchPaintings({ commit }) {
       commit('clearError')
+      commit('setLoading', true)
       try {
         const paintingsRef = await ref(db, 'paintings')
         await onValue(paintingsRef, (snapshot) => {
@@ -61,37 +64,41 @@ export default new Vuex.Store({
             })
           })
           commit('fetchPaintings', resultPaintings)
+          commit('setLoading', false)
         })
+      } catch (error) {
+        commit('setLoading', false)
+        commit('setError', error.message)
+        throw error
+      }
+    },
+    async payStripePictures({ state, commit }, paymentDetails) {
+      commit('clearError')
+      try {
+        const response = await axios.post(`${state.urlHeroku}/payStripePictures`, {
+          ...paymentDetails
+        })
+        const result = await stripe.redirectToCheckout({
+          sessionId: response.data
+        })
+        console.log(result)
       } catch (error) {
         commit('setError', error.message)
         throw error
       }
     },
-    async payStripePictures({ commit }, paymentDetails) {
-      console.log(paymentDetails)
+    async nodeMailer({ state, commit }, { userName, userEmail, subject, text }) {
       commit('clearError')
-      // try {
-      //   const response = await axios.post(`${getters.url}/payStripePictures`, {
-      //     ...paymentDetails
-      //   })
-      //   stripe.redirectToCheckout({
-      //     sessionId: response.data
-      //   })
-      // } catch (error) {
-      //   commit('setError', error.message)
-      //   throw error
-      // }
-    },
-    async nodeMailer({ commit, getters }, { userName, userEmail, subject, text }) {
-      commit('clearError')
+      commit('setLoading', true)
       try {
-        return await axios.post(`${getters.url}/nadiaArt/nodemailer`, {
+        return await axios.post(`${state.urlHeroku}/nadiaArt/nodemailer`, {
           userName,
           userEmail,
           subject,
           text
         })
       } catch (error) {
+        commit('setLoading', false)
         commit('setError', error.message)
         throw error
       }
