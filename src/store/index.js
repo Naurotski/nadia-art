@@ -15,12 +15,11 @@ export default new Vuex.Store({
     drawer: false,
     links: ['Home', 'About me', 'Gallery', 'Shop', 'Contact'],
     paintings: [],
-    categories: ['All', 'Life Captured', 'Between the Worlds', 'Beyond Reality'],
-    filter: 'All',
+    categories: ['Life Captured', 'Between the Worlds', 'Beyond Reality'],
+    filter: 'Life Captured',
     error: null,
     loading: false,
-    // urlHeroku: 'https://metamorfosi.herokuapp.com'
-    urlHeroku: 'http://localhost:3000'
+    urlHeroku: 'https://metamorfosi.herokuapp.com'
   },
   getters: {
     url: (state) => state.url,
@@ -78,10 +77,9 @@ export default new Vuex.Store({
         const response = await axios.post(`${state.urlHeroku}/payStripePictures`, {
           ...paymentDetails
         })
-        const result = await stripe.redirectToCheckout({
+        await stripe.redirectToCheckout({
           sessionId: response.data
         })
-        console.log(result)
       } catch (error) {
         commit('setError', error.message)
         throw error

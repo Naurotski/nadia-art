@@ -25,7 +25,7 @@
   </div>
 </template>
 <script>
-import { mapState, mapActions } from 'vuex'
+import { mapActions } from 'vuex'
 export default {
   name: 'Gallery',
   props: {
@@ -44,7 +44,6 @@ export default {
     page: 1
   }),
   computed: {
-    ...mapState(['filter', 'picture', 'paintings']),
     paginatedPictures() {
       return this.listPictures.slice(0, this.page * 12)
     }

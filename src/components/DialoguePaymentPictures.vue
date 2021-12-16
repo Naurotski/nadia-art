@@ -180,7 +180,8 @@ export default {
   methods: {
     payStripe() {
       this.$store.dispatch('payStripePictures', {
-        name: `${this.painting.title}/${this.goods}/${this.painting.id}/${this.price}`,
+        id: this.painting.id,
+        name: `${this.painting.title}/${this.goods}`,
         description: `${this.localUser.firstName} ${this.localUser.lastName}/${this.localUser.address}/${this.localUser.city}/${this.localUser.country}/${this.localUser.postalCode}/${this.localUser.phone}`,
         email: this.localUser.email,
         images: this.painting.imageSrc,
