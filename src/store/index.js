@@ -19,7 +19,8 @@ export default new Vuex.Store({
     filter: 'Life Captured',
     error: null,
     loading: false,
-    urlHeroku: 'https://metamorfosi.herokuapp.com'
+    urlHeroku: 'https://metamorfosi.herokuapp.com',
+    serviceWorker: null
   },
   getters: {
     url: (state) => state.url,
@@ -44,7 +45,8 @@ export default new Vuex.Store({
     changeFilter: (state, category) => (state.filter = category),
     setError: (state, payload) => (state.error = payload),
     clearError: (state) => (state.error = null),
-    setLoading: (state, payload) => (state.loading = payload)
+    setLoading: (state, payload) => (state.loading = payload),
+    updatedServiceWorker: (state, payload) => (state.serviceWorker = payload)
   },
   actions: {
     async fetchPaintings({ commit }) {

@@ -16,7 +16,10 @@
 
 <script>
 export default {
-  name: 'NotFound'
+  name: 'NotFound',
+  metaInfo: {
+    title: 'NotFound'
+  }
 }
 </script>
 <style scoped lang="sass">

@@ -105,6 +105,17 @@ import { mapState, mapMutations, mapActions } from 'vuex'
 
 export default {
   name: 'Contact',
+  metaInfo: {
+    title: 'Contact',
+    meta: [
+      {
+        vmid: 'description',
+        name: 'description',
+        content:
+          'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus autem cupiditate dignissimos dolor esse ex nostrum porro quaerat rerum tempore.'
+      }
+    ]
+  },
   data: () => ({
     valid: false,
     userName: '',

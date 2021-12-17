@@ -21,6 +21,18 @@
 import { mapState, mapActions } from 'vuex'
 export default {
   name: 'Home',
+  metaInfo: {
+    title: 'Naurotskaya Nadzeya',
+    titleTemplate: null,
+    meta: [
+      {
+        vmid: 'description',
+        name: 'description',
+        content:
+          'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus autem cupiditate dignissimos dolor esse ex nostrum porro quaerat rerum tempore.'
+      }
+    ]
+  },
   data: () => ({
     painting: null,
     timer: null,

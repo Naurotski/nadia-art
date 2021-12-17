@@ -84,6 +84,21 @@
 import { mapActions } from 'vuex'
 export default {
   name: 'Painting',
+  metaInfo() {
+    if (this.painting) {
+      return {
+        title: `Buy a painting ${this.painting.title}`,
+        meta: [
+          {
+            vmid: 'description',
+            name: 'description',
+            content:
+              'В галерее вы можете найти и приобрести графические и живописные работы Надежды Навроцкой. Художник, фотограф, психолог и арт-терапевт, автор проекта «Metamorfosi». '
+          }
+        ]
+      }
+    }
+  },
   components: {
     DialoguePaymentPictures: () => import('@/components/DialoguePaymentPictures')
   },

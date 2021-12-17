@@ -37,7 +37,18 @@
 </template>
 <script>
 export default {
-  name: 'About'
+  name: 'About',
+  metaInfo: {
+    title: 'About Me',
+    meta: [
+      {
+        vmid: 'description',
+        name: 'description',
+        content:
+          'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus autem cupiditate dignissimos dolor esse ex nostrum porro quaerat rerum tempore.'
+      }
+    ]
+  }
 }
 </script>
 

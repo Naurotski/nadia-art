@@ -18,6 +18,17 @@
 import { mapGetters } from 'vuex'
 export default {
   name: 'Gallery',
+  metaInfo: {
+    title: 'Gallery',
+    meta: [
+      {
+        vmid: 'description',
+        name: 'description',
+        content:
+          'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus autem cupiditate dignissimos dolor esse ex nostrum porro quaerat rerum tempore.'
+      }
+    ]
+  },
   components: {
     Paintings: () => import('@/components/Paintings')
   },
