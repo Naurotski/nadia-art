@@ -1,5 +1,5 @@
 <template>
-  <v-footer class="justify-center" color="grey lighten-2" height="156" inset>
+  <v-footer class="justify-center" color="grey lighten-2" inset>
     <div class="text-center">
       <v-btn v-for="(icon, i) in icons" :key="i" class="ma-1" icon>
         <v-icon v-text="icon" />

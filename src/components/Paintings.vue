@@ -1,6 +1,6 @@
 <template>
   <div v-scroll="onScroll" class="v-gallery">
-    <v-filter />
+    <!--    <v-filter />-->
     <v-container :fluid="!isScrolling" class="transition-swing">
       <v-row :no-gutters="!isScrolling" class="transition-swing mx-n4">
         <v-col
@@ -35,8 +35,8 @@ export default {
     }
   },
   components: {
-    PaintingCard: () => import('@/components/PaintingCard'),
-    VFilter: () => import('@/components/Filter')
+    PaintingCard: () => import('@/components/PaintingCard')
+    // VFilter: () => import('@/components/Filter')
   },
   data: () => ({
     dialog: false,

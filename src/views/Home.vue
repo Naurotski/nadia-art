@@ -37,7 +37,7 @@ export default {
     painting: null,
     timer: null,
     backgroundUrl:
-      'https://firebasestorage.googleapis.com/v0/b/first-project-6daea.appspot.com/o/paintinds%2F-LwVO3RdQAoakK_Me6z5?alt=media&token=d702f715-0cca-4e23-bf94-98c897cc908a'
+      'https://firebasestorage.googleapis.com/v0/b/first-project-6daea.appspot.com/o/paintinds%2F-Mb6XFdwVK9NksmHfIG2?alt=media&token=6402537a-0098-44b2-b961-807ebe544bf3'
   }),
   computed: {
     ...mapState(['paintings']),
@@ -52,7 +52,7 @@ export default {
       this.$forceUpdate()
       if (++counter >= this.carouselFilter.length) counter = 0
       this.backgroundUrl = this.carouselFilter[counter].imageSrc
-    }, 5000)
+    }, 8000)
   },
   beforeDestroy() {
     clearInterval(this.timer)

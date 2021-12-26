@@ -3,16 +3,16 @@
     <v-container>
       <v-row>
         <div class="d-flex align-center">
-          <!--          <v-img-->
-          <!--            :src="require('@/assets/logo.png')"-->
-          <!--            contain-->
-          <!--            class="shrink mr-2"-->
-          <!--            height="48"-->
-          <!--            width="48"-->
-          <!--          />-->
-          <v-toolbar-title class="primary--text headline font-italic">
+          <v-img
+            :src="require('@/assets/logo.png')"
+            contain
+            class="shrink mr-2 d-none d-lg-flex"
+            height="48"
+            width="48"
+          />
+          <v-toolbar-title class="headline font-italic">
             <router-link to="/" tag="span" style="cursor: pointer">
-              <span class="font-weight-bold">Naurotskaya</span>Nadzeya
+              <span class="font-weight-bold">Nadzeya</span>Naurotskaya
             </router-link>
           </v-toolbar-title>
         </div>
