@@ -47,9 +47,9 @@ export default {
   },
   created() {
     if (!this.paintings.length) this.fetchPaintings()
-    let counter = -1
+    let counter = 0
     this.timer = setInterval(() => {
-      this.$forceUpdate()
+      // this.$forceUpdate()
       if (++counter >= this.carouselFilter.length) counter = 0
       this.backgroundUrl = this.carouselFilter[counter].imageSrc
     }, 8000)

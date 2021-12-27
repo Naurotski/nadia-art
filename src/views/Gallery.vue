@@ -31,7 +31,7 @@
           ratione repellendus sapiente similique sit unde, vel velit.
         </v-responsive>
       </section>
-      <Paintings key="b" :listPictures="filteredPaintings" />
+      <Paintings key="b" :listPictures="sortPaintings" />
     </transition-group>
   </v-container>
 </template>
@@ -46,6 +46,7 @@ export default {
       {
         vmid: 'description',
         name: 'description',
+        // Поменять
         content:
           'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus autem cupiditate dignissimos dolor esse ex nostrum porro quaerat rerum tempore.'
       }
@@ -57,7 +58,15 @@ export default {
   },
   computed: {
     ...mapState(['filter']),
-    ...mapGetters(['filteredPaintings'])
+    ...mapGetters(['filteredPaintings']),
+    sortPaintings() {
+      // eslint-disable-next-line vue/no-side-effects-in-computed-properties
+      return this.filteredPaintings.sort((a, b) => {
+        if (a.index < b.index) return -1
+        if (a.index === b.index) return 0
+        if (a.index > b.index) return 1
+      })
+    }
   }
 }
 </script>

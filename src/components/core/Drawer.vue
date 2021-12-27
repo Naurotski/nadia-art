@@ -21,8 +21,7 @@
 
     <template v-slot:append>
       <div class="py-8">
-        <v-img :src="require('@/assets/logo.png')" class="mx-auto mb-8" max-width="128" />
-
+        <!--        <v-img :src="require('@/assets/logo.png')" class="mx-auto mb-8" max-width="128" />-->
         <div class="text-center title">
           <span class="primary--text">Naurotskaya Nadzeya</span><br /><span
             class="display-1 font-weight-bold"
