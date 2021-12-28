@@ -4,10 +4,7 @@
       <v-btn v-for="(icon, i) in icons" :key="i" class="ma-1" icon>
         <v-icon v-text="icon" />
       </v-btn>
-
-      <div class="my-3" />
-
-      <div>&copy; {{ date }}&nbsp;<strong>Naurotskaya Nadzeya</strong></div>
+      <p class="caption">&copy; {{ date }} Naurotskaya Nadzeya</p>
     </div>
   </v-footer>
 </template>
