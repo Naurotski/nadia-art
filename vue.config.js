@@ -2,7 +2,7 @@ module.exports = {
   transpileDependencies: ['vuetify'],
   pwa: {
     name: 'MetaMorfosi',
-    // themeColor: '#EB7B9A',
+    themeColor: '#FFFFFF',
     msTileColor: '#000000',
     appleMobileWebAppCapable: 'yes',
     appleMobileWebAppStatusBarStyle: 'black',
