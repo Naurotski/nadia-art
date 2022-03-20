@@ -17,48 +17,63 @@
             >
               Nadzeya Naurotskaya <br />
             </h1>
-            <p>was born in Belarus and since 2017 lives in Pisa (Italy).</p>
             <p>
-              It was art therapy that led to painting and photography. Studied drawing at Accademia
-              d’arte di Pisa (Professor Bruno Pollacci&#39;s class). Traditional paintings on canvas
-              and graphic drawings were soon supplemented by work on stained glass.
+              Born in Belarus, Nadzeya has been living in Pisa (Italy) since 2017. Her professional
+              route (medical psychology, psychotherapy and art therapy) has led Nadzeya to painting
+              and photography and their limitless possibilities in understanding herself and the
+              world around her.
             </p>
             <p>
-              Her paintings are like entrances to parallel worlds. They are for those who knows: the
-              world is not enough. There are other spaces where we live right now. Where we live a
-              different life. And we can transfer between these worlds. What for? To have other
-              experience of ourselves, to open the mind, to expand the consciousness.
+              Nadzeya studied painting at Accademia d'arte di Pisa (class of Prof. Bruno Pollacci).
+              Traditional paintings on canvas, followed by the study of stained glass and mosaics.
+              Today, Nadzeya's works are art objects made in mixed techniques.
             </p>
             <p>
-              Everything starts from acrylic one day, then - oil, a bit later comes to oil canvases
-              with built-in glass. Vital brushstroke and bold colors create memorable images. They
-              seem to be both familiar and unexplored, vivid and intimate, something that you easily
-              identify but it remains mysterious.
+              Today, the artist's attention is focused on double-sided paintings "with a secret."
+              Nadzeya spent her childhood in the Soviet Union. At that time, a children's game
+              "secrets" was popular. It was almost a ritual: to dig a small hole, hide a “treasure”
+              (a button, really beautiful pebble or flower, a piece of foil or a colored picture),
+              to cover it with transparent bottle glass, sprinkle it with ground, remember this
+              place. In order to come there later, dig out the "secret" and admire without telling
+              others. Adults, in the life behind the Iron Curtain, and then in dictatorial Belarus,
+              have always had a secret. However, this secret is of the opposite nature. A beautiful
+              picture outside and terrifying secrets inside ...
             </p>
             <p>
-              Nadzeya&#39;s double-sided paintings embody the concept of dual reality in it&#39;s
-              best way. Even if it&#39;s hard for one to imagine something behind this materialistic
-              world - just take a look at these small pieces of stained glass. It&#39;s enough, you
-              are already there. Just turn a picture to the other side and you are in a rabbit-hole.
-              Everything is possible there, everything is allowed.
+              So, this is the way it works with the paintings “with a secret”. On the front side,
+              there’s a painting, familiar to the eye of a layperson. Clear colors, easy to see
+              people, nature, architecture. Simple, rather even primitive, naive creativity. Each
+              painting has a little glass window. A window which you can look into and see what is
+              there, "on the other side." On the inside, hidden from prying eyes. What are the
+              secrets?
             </p>
             <p>
-              It&#39;s an incredible and unforgettable experience. Mostly because of the
-              author&#39;s background - Nadezhda is an art therapist with more than 20 year
-              practice. She knows how to see more in everybody and everything. Her paintings are
-              invitations to find out - who we are?
+              Nadzeya's double-sided paintings and art objects also embody the global concept of
+              double reality. It is difficult to imagine anything behind this materialistic world,
+              where people are accustomed to see only what is shown to them. But look at this piece
+              of colored glass just for a few seconds. That's enough. You are already there. The
+              only thing you need is to turn the picture around, to turn its another side – here it
+              is, your rabbit hole. And you will never forget this experience.
             </p>
             <p>
-              Выставки и каталоги <br />
-              август 2021 - виртуальная выставка белорусского современного искусства «2020», <br />
-              виртуальная галерея Европейского Гуманитарного университета (Вильнюс, Литва)<br />
-              июль 2020 - пленэр и выставка “Il balletto” (Нерви, Генуя, Италия)<br />
-              октябрь 2019 - пленэр и выставка «La bellezza del tempo 2» (Нерви, Генуя, Италия)<br />
-              июль 2019 - пленэр и выставка «NERVI. En PLEIN AIR» (Нерви, Генуя, Италия)<br />
-              ноябрь 2018 - коллективная выставка «Preziosità d’Italia» (Calcinaia (PI), Италия)<br />
-              Каталоги:<br />
-              ARTNow – май-июнь, 2020<br />
-              Artisticamente n°3 - Roma, 2018
+              What creates such a powerful effect? The very personality of the author. The artist
+              knows exactly how to see more in everyone and everything. And her paintings are
+              inviting you to discover for yourself – who are we?
+            </p>
+            <p>
+              Exhibitions and catalogues <br />
+              <br />
+              February 2022 – virtual exhibition «Gubbio With Love», Associazione culturale La
+              Medusa, Italia October 12 - November 11 2022 - Intimists 9 «Wonderful world», La
+              Fenice Art Gallery (Hong Kong) August 2021 - virtual exhibition of Belarusian
+              contemporary art «2020», online gallery of the European Humanities University
+              (Vilnius, Lithuania) July 2020 - plein air and exhibition «Il balletto» (Nervi, Genoa,
+              Italy) October 2019 - plein air and exhibition «La bellezza del tempo 2» (Nervi,
+              Genoa, Italy) July 2019 - plein air and exhibition «NERVI. En PLEIN AIR» (Nervi,
+              Genoa, Italy) November 2018 - collective exhibition «Preziosità d'Italia» (Calcinaia
+              (PI), Italy) <br />
+              <br />
+              Catalogues: ARTNow - May-June, 2020 Artisticamente n° 3 - Rome, 2018
             </p>
           </v-responsive>
         </v-col>

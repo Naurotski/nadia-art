@@ -13,10 +13,10 @@ const db = getDatabase()
 export default new Vuex.Store({
   state: {
     drawer: false,
-    links: ['Home', 'About me', 'Gallery', 'Shop', 'Contact'],
+    links: ['Home', 'About', 'Gallery', 'Shop', 'Contact'],
     paintings: [],
-    categories: ['Life Captured', 'Between the Worlds', 'Beyond Reality'],
-    filter: 'Life Captured',
+    categories: ['Visible World', 'With a Secret', 'Objects'],
+    filter: 'Visible World',
     error: null,
     loading: false,
     urlHeroku: 'https://metamorfosi.herokuapp.com',

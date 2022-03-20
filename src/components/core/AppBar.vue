@@ -19,7 +19,7 @@
 
         <v-spacer />
 
-        <v-toolbar-items v-if="$vuetify.breakpoint.smAndUp" class="shrink">
+        <v-toolbar-items v-if="$vuetify.breakpoint.lgAndUp" class="shrink">
           <v-btn
             v-for="(link, i) in links"
             :key="i"

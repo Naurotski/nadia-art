@@ -1,13 +1,19 @@
 <template>
   <v-container id="home" class="pt-12 pb-0 px-0" fluid tag="section">
     <transition-group appear name="fadeGroup" mode="out-in">
-      <section key="a" id="intro" class="text-center mb-12">
+      <section key="a" id="intro" class="text-center mb-12 mx-3">
         <h1 class="display-2 font-weight-light mb-8">Shop</h1>
-        <!--        <v-responsive class="mx-auto subtitle-1 grey&#45;&#45;text" max-width="550">-->
-        <!--          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum veniam atque quas eligendi-->
-        <!--          officiis nemo at praesentium molestiae, veritatis doloremque delectus nostrum provident-->
-        <!--          temporibus aliquid autem ipsam ducimus magnam porro.-->
-        <!--        </v-responsive>-->
+        <v-responsive class="mx-auto subtitle-1 grey--text" max-width="750">
+          You can buy any artwork with worldwide delivery. At a buyer’s request, a painting or a
+          stained-glass artwork can be framed for additional fee. <br />
+          <br />
+          Please check all the information about the packaging of artworks and delivery before
+          confirming a purchase. All the contact options can be found in the "Contacts" section.
+          <br />
+          <br />Upon delivery outside the EU, for each painting (stained glass artwork), we issue
+          accompanying documents allowing to export the art objects. This may take additional 2-3
+          weeks.
+        </v-responsive>
       </section>
       <Paintings key="b" :listPictures="shopListPaintings" />
     </transition-group>

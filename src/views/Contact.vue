@@ -18,9 +18,8 @@
           <h1 class="display-1 mb-8 font-weight-bold">Contact Info:</h1>
 
           <div class="mb-8">
-            Praesent interdum congue mauris, et fringilla lacus pel vitae. Quisque nisl mauris,
-            aliquam eu ultrices vel, conse vitae sapien at imperdiet risus. Quisque cursus risus id.
-            fermentum, in auctor quam consectetur.
+            Should you have any questions, please send us an e-mail or complete the enquiry form and
+            Nadzeya will be in touch shortly.
           </div>
 
           <div class="mb-4"><strong>Address</strong> 56010 Ghezzano PI, via Petrarca, 17</div>
