@@ -1,8 +1,8 @@
 <template>
   <v-snackbar v-model="snackbar" app top timeout="-1" centered color="#B0BEC5">
-    Найден новый контент
+    New content is available.
     <template v-slot:action="{ attrs }">
-      <v-btn color="blue" text v-bind="attrs" @click="refreshNewContent">перезагрузить</v-btn>
+      <v-btn color="blue" text v-bind="attrs" @click="refreshNewContent">Refresh</v-btn>
     </template>
   </v-snackbar>
 </template>
