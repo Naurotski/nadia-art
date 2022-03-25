@@ -18,7 +18,15 @@
 export default {
   name: 'NotFound',
   metaInfo: {
-    title: 'NotFound'
+    title: 'Not Found',
+    meta: [
+      {
+        vmid: 'description',
+        name: 'description',
+        // Поменять
+        content: 'Not Found'
+      }
+    ]
   }
 }
 </script>

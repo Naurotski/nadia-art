@@ -10,7 +10,7 @@
           <!--            height="48"-->
           <!--            width="48"-->
           <!--          />-->
-          <v-toolbar-title class="display-2 pb-3">
+          <v-toolbar-title class="display-2 pb-3" :class="{ 'display-1': $vuetify.breakpoint.xs }">
             <router-link to="/" tag="span" style="cursor: pointer">
               <span class="font-weight-regular">Nadzeya Naurotskaya</span>
             </router-link>

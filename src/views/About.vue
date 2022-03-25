@@ -24,7 +24,7 @@
               world around her.
             </p>
             <p>
-              Nadzeya studied painting at Accademia d'arte di Pisa (class of Prof. Bruno Pollacci).
+              Nadzeya studied drawing at Accademia d'arte di Pisa (class of Prof. Bruno Pollacci).
               Traditional paintings on canvas, followed by the study of stained glass and mosaics.
               Today, Nadzeya's works are art objects made in mixed techniques.
             </p>
@@ -64,16 +64,22 @@
               Exhibitions and catalogues <br />
               <br />
               February 2022 – virtual exhibition «Gubbio With Love», Associazione culturale La
-              Medusa, Italia October 12 - November 11 2022 - Intimists 9 «Wonderful world», La
-              Fenice Art Gallery (Hong Kong) August 2021 - virtual exhibition of Belarusian
-              contemporary art «2020», online gallery of the European Humanities University
-              (Vilnius, Lithuania) July 2020 - plein air and exhibition «Il balletto» (Nervi, Genoa,
-              Italy) October 2019 - plein air and exhibition «La bellezza del tempo 2» (Nervi,
-              Genoa, Italy) July 2019 - plein air and exhibition «NERVI. En PLEIN AIR» (Nervi,
-              Genoa, Italy) November 2018 - collective exhibition «Preziosità d'Italia» (Calcinaia
-              (PI), Italy) <br />
+              Medusa, Italia <br />
+              October 12 - November 11 2022 - Intimists 9 «Wonderful world», La Fenice Art Gallery
+              (Hong Kong) <br />
+              August 2021 - virtual exhibition of Belarusian contemporary art «2020», online gallery
+              of the European Humanities University (Vilnius, Lithuania) <br />
+              July 2020 - plein air and exhibition «Il balletto» (Nervi, Genoa, Italy) <br />
+              October 2019 - plein air and exhibition «La bellezza del tempo 2» (Nervi, Genoa,
+              Italy) <br />
+              July 2019 - plein air and exhibition «NERVI. En PLEIN AIR» (Nervi, Genoa, Italy)
               <br />
-              Catalogues: ARTNow - May-June, 2020 Artisticamente n° 3 - Rome, 2018
+              November 2018 - collective exhibition «Preziosità d'Italia» (Calcinaia (PI), Italy)
+              <br />
+              <br />
+              Catalogues: <br />
+              ARTNow - May-June, 2020 <br />
+              Artisticamente n° 3 - Rome, 2018
             </p>
           </v-responsive>
         </v-col>
@@ -85,13 +91,13 @@
 export default {
   name: 'About',
   metaInfo: {
-    title: 'About Me',
+    title: 'Bio',
     meta: [
       {
         vmid: 'description',
         name: 'description',
         content:
-          'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus autem cupiditate dignissimos dolor esse ex nostrum porro quaerat rerum tempore.'
+          'Born in Belarus, Nadzeya Naurotskaya Italy base artist. Contemporary art as a possibility to understand human nature and the world around. Artist of freedom'
       }
     ]
   }

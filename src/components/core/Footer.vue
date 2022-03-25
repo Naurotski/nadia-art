@@ -1,8 +1,15 @@
 <template>
   <v-footer class="justify-center" color="grey lighten-2" inset>
     <div class="text-center">
-      <v-btn v-for="(icon, i) in icons" :key="i" class="ma-1" icon>
-        <v-icon v-text="icon" />
+      <v-btn
+        v-for="item in socialMedia"
+        :key="item.path"
+        :href="item.path"
+        class="ma-1"
+        icon
+        target="_blank"
+      >
+        <v-icon v-text="item.icon" />
       </v-btn>
       <p class="caption">&copy; {{ date }} Naurotskaya Nadzeya</p>
     </div>
@@ -15,7 +22,10 @@ export default {
 
   data: () => ({
     date: new Date().getFullYear(),
-    icons: ['mdi-facebook', 'mdi-instagram']
+    socialMedia: [
+      { icon: 'mdi-facebook', path: 'https://www.facebook.com/Naurotskaya.ART' },
+      { icon: 'mdi-instagram', path: 'https://instagram.com/art_navrotskaya?utm_medium=copy_link' }
+    ]
   })
 }
 </script>

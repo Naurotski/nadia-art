@@ -3,7 +3,11 @@
     <core-app-bar />
     <core-drawer />
     <v-main>
-      <router-view />
+      <router-view v-slot="{ Component }">
+        <keep-alive :max="3">
+          <component :is="Component" />
+        </keep-alive>
+      </router-view>
       <snackbars />
       <floating-button />
       <snackbar-service-worker />
@@ -16,14 +20,14 @@
 export default {
   name: 'App',
   metaInfo: {
-    title: 'Naurotskaya Nadzeya',
-    titleTemplate: '%s | Naurotskaya Nadzeya',
+    title: 'Nadzeya Naurotskaya - Artist Gallery Shop',
+    titleTemplate: '%s | Nadzeya Naurotskaya - Artist',
     meta: [
       {
         vmid: 'description',
         name: 'description',
         content:
-          'MetaMorfosi - виртуальное пространство психологических игр, погружения в бессознательное и арт-терапии. Психосоматика, психология отношений, мотивация, развитие творческого потенциала, раскрытие талантов, искусство.'
+          'Italy based artist - Double-sided images, stained glass, mosaics, sculpture - Art-objects «with a secret'
       }
     ]
   },

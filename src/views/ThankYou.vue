@@ -35,6 +35,17 @@
 <script>
 export default {
   name: 'ThankYou',
+  metaInfo: {
+    title: 'Thank You',
+    meta: [
+      {
+        vmid: 'description',
+        name: 'description',
+        // Поменять
+        content: 'Thank You'
+      }
+    ]
+  },
   props: {
     id: {
       type: String,

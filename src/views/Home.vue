@@ -22,14 +22,14 @@ import { mapState, mapActions } from 'vuex'
 export default {
   name: 'Home',
   metaInfo: {
-    title: 'Naurotskaya Nadzeya',
+    title: 'Nadzeya Naurotskaya - Artist Gallery Shop',
     titleTemplate: null,
     meta: [
       {
         vmid: 'description',
         name: 'description',
         content:
-          'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus autem cupiditate dignissimos dolor esse ex nostrum porro quaerat rerum tempore.'
+          'Italy based artist - Double-sided images, stained glass, mosaics, sculpture - Art-objects «with a secret»'
       }
     ]
   },
@@ -37,7 +37,7 @@ export default {
     painting: null,
     timer: null,
     backgroundUrl:
-      'https://firebasestorage.googleapis.com/v0/b/first-project-6daea.appspot.com/o/paintinds%2F-Mb6XFdwVK9NksmHfIG2?alt=media&token=6402537a-0098-44b2-b961-807ebe544bf3'
+      'https://firebasestorage.googleapis.com/v0/b/first-project-6daea.appspot.com/o/paintinds%2F-Mycj0hSYuN7gY4B4WNb?alt=media&token=77814594-32cc-4598-970f-6674badeb91e'
   }),
   computed: {
     ...mapState(['paintings']),
@@ -49,7 +49,6 @@ export default {
     if (!this.paintings.length) this.fetchPaintings()
     let counter = 0
     this.timer = setInterval(() => {
-      // this.$forceUpdate()
       if (++counter >= this.carouselFilter.length) counter = 0
       this.backgroundUrl = this.carouselFilter[counter].imageSrc
     }, 8000)

@@ -92,8 +92,7 @@ export default {
           {
             vmid: 'description',
             name: 'description',
-            content:
-              'В галерее вы можете найти и приобрести графические и живописные работы Надежды Навроцкой.'
+            content: this.painting.description2
           }
         ]
       }

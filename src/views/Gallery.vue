@@ -59,7 +59,7 @@ export default {
         name: 'description',
         // Поменять
         content:
-          'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus autem cupiditate dignissimos dolor esse ex nostrum porro quaerat rerum tempore.'
+          "Double-sided images, oil paintings, stained glass, mosaics, sculpture. Photos and author's Concepts"
       }
     ]
   },
