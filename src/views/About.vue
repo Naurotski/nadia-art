@@ -65,7 +65,7 @@
               <br />
               February 2022 – virtual exhibition «Gubbio With Love», Associazione culturale La
               Medusa, Italia <br />
-              October 12 - November 11 2022 - Intimists 9 «Wonderful world», La Fenice Art Gallery
+              October 12 - November 11 2021 - Intimists 9 «Wonderful world», La Fenice Art Gallery
               (Hong Kong) <br />
               August 2021 - virtual exhibition of Belarusian contemporary art «2020», online gallery
               of the European Humanities University (Vilnius, Lithuania) <br />
