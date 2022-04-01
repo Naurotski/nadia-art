@@ -18,7 +18,7 @@
               ref="iframeVideo"
               :src="painting.videoSrc"
               width="100%"
-              height="550"
+              :height="$vuetify.breakpoint.xs ? 300 : 550"
               style="border: none"
               allow="accelerometer; fullscreen; autoplay; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
