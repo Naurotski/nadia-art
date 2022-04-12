@@ -74,6 +74,17 @@
               :goods="`pictures`"
             />
           </v-card-actions>
+          <v-card-actions>
+            <v-btn
+              v-if="painting.linkNft"
+              :x-small="$vuetify.breakpoint.xs"
+              text
+              color="red"
+              target="_blank"
+              :href="painting.linkNft"
+              >NFT</v-btn
+            >
+          </v-card-actions>
         </v-col>
       </v-row>
     </transition>
