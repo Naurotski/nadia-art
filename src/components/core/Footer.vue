@@ -11,7 +11,7 @@
       >
         <v-icon v-text="item.icon" />
       </v-btn>
-      <p class="caption">&copy; {{ date }} Naurotskaya Nadzeya</p>
+      <p class="caption">&copy; {{ date }} Nadzeya Naurotskaya</p>
     </div>
   </v-footer>
 </template>
