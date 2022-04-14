@@ -31,7 +31,9 @@ if (process.env.NODE_ENV === 'production') {
       console.error('Error during service worker registration:', error)
     }
   })
-  navigator.serviceWorker.addEventListener('controllerchange', () => {
-    window.location.reload()
-  })
+  if (navigator.serviceWorker) {
+    navigator.serviceWorker.addEventListener('controllerchange', () => {
+      window.location.reload()
+    })
+  }
 }
