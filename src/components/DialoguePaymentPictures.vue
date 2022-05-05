@@ -2,7 +2,9 @@
   <v-dialog v-model="dialog" persistent max-width="800px">
     <template v-slot:activator="{ on }">
       <slot :on="on" name="button"
-        ><v-btn :x-small="$vuetify.breakpoint.xs" text color="red" v-on="on">buy</v-btn></slot
+        ><v-btn :x-small="$vuetify.breakpoint.xs" text color="red" v-on="on"
+          >buy painting</v-btn
+        ></slot
       >
     </template>
     <v-card>

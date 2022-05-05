@@ -82,7 +82,7 @@
               color="red"
               target="_blank"
               :href="painting.linkNft"
-              >NFT</v-btn
+              >buy NFT</v-btn
             >
           </v-card-actions>
         </v-col>
