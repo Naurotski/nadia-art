@@ -63,6 +63,9 @@
             <p>
               Exhibitions and catalogues <br />
               <br />
+              May 2022 - collective exhibition «Ukraine and Russia, the Art for Freedom» (Pisa,
+              Italy)
+              <br />
               February 2022 – virtual exhibition «Gubbio With Love», Associazione culturale La
               Medusa, Italia <br />
               October 12 - November 11 2021 - Intimists 9 «Wonderful world», La Fenice Art Gallery
@@ -74,12 +77,23 @@
               Italy) <br />
               July 2019 - plein air and exhibition «NERVI. En PLEIN AIR» (Nervi, Genoa, Italy)
               <br />
+              May 2019 - collective exhibition of botanical photography Fito-Photo 2019 (Botanical
+              ointment of Pisa, Italy)
+              <br />
               November 2018 - collective exhibition «Preziosità d'Italia» (Calcinaia (PI), Italy)
               <br />
               <br />
               Catalogues: <br />
               ARTNow - May-June, 2020 <br />
               Artisticamente n° 3 - Rome, 2018
+              <br /><br />
+              Press
+              <br />
+              <a
+                href="https://www.lanazione.it/pisa/cronaca/ucraini-e-russi-arte-insieme-1.7671844?fbclid=IwAR3_RUWyGxKFoZ1tBlWwkG56PP1mBKSZqCaedxgHWMBgexDglvI5AvsHskg"
+                target="_blank"
+                >lanazione.it</a
+              >
             </p>
           </v-responsive>
         </v-col>
