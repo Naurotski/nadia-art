@@ -5,7 +5,7 @@
         <v-col cols="12" md="4">
           <v-img
             gradient="to top, rgba(0, 0, 0, .0), rgba(0, 0, 0, .0)"
-            :src="require('@/assets/IMG_3049.jpg')"
+            :src="require('@/assets/IMG_8783.jpeg')"
           />
         </v-col>
         <v-col class="d-block d-md-flex align-center pa-6" cols="12" md="8">
@@ -18,47 +18,26 @@
               Nadzeya Naurotskaya <br />
             </h1>
             <p class="text-justify">
-              Born in Belarus, Nadzeya has been living in Pisa (Italy) since 2017. Her professional
-              route (medical psychology, psychotherapy and art therapy) has led Nadzeya to painting
-              and photography and their limitless possibilities in understanding herself and the
-              world around her.
-            </p>
-            <p class="text-justify">
-              Nadzeya studied drawing at Accademia d'arte di Pisa (class of Prof. Bruno Pollacci).
-              Traditional paintings on canvas, followed by the study of stained glass and mosaics.
-              Today, Nadzeya's works are art objects made in mixed techniques.
-            </p>
-            <p class="text-justify">
-              Today, the artist's attention is focused on double-sided paintings "with a secret."
-              Nadzeya spent her childhood in the Soviet Union. At that time, a children's game
-              "secrets" was popular. It was almost a ritual: to dig a small hole, hide a “treasure”
-              (a button, really beautiful pebble or flower, a piece of foil or a colored picture),
-              to cover it with transparent bottle glass, sprinkle it with ground, remember this
-              place. In order to come there later, dig out the "secret" and admire without telling
-              others. Adults, in the life behind the Iron Curtain, and then in dictatorial Belarus,
-              have always had a secret. However, this secret is of the opposite nature. A beautiful
-              picture outside and terrifying secrets inside ...
-            </p>
-            <p class="text-justify">
-              So, this is the way it works with the paintings “with a secret”. On the front side,
-              there’s a painting, familiar to the eye of a layperson. Clear colors, easy to see
-              people, nature, architecture. Simple, rather even primitive, naive creativity. Each
-              painting has a little glass window. A window which you can look into and see what is
-              there, "on the other side." On the inside, hidden from prying eyes. What are the
-              secrets?
-            </p>
-            <p class="text-justify">
-              Nadzeya's double-sided paintings and art objects also embody the global concept of
-              double reality. It is difficult to imagine anything behind this materialistic world,
-              where people are accustomed to see only what is shown to them. But look at this piece
-              of colored glass just for a few seconds. That's enough. You are already there. The
-              only thing you need is to turn the picture around, to turn its another side – here it
-              is, your rabbit hole. And you will never forget this experience.
-            </p>
-            <p class="text-justify">
-              What creates such a powerful effect? The very personality of the author. The artist
-              knows exactly how to see more in everyone and everything. And her paintings are
-              inviting you to discover for yourself – who are we?
+              A self-taught artist. She left a successful career of a psychotherapist, osteopath and
+              homeopath and gradually focused exclusively on art. She first mastered painting and
+              photography on her own, then it was working with glass, mosaics and sculpture. The
+              works are increasingly dominated by mixed media art technique that shows the search
+              for a way to reflect the world seen by the artist. Glass and cement are embedded in
+              canvases, portal paintings and portal sculptures appear. The works seem to lead to
+              other realities. <br />“I’m getting to understand more and more that the words
+              invented by people are too poor to reflect sensory experience. Only through images,
+              colors, lines and elusive invisible spirit can one convey their experience. I am
+              completely disappointed in psychotherapy – it's like an artificial attempt to
+              manipulate the deep. Art has a much deeper and more healing effect.” <br />Hidden
+              worlds break through the artist's works into our visible life: through vibrating
+              brushstrokes, trembling images, through stained glass, through mosaics left in parks
+              and on paths that evoke the feeling of a “break” in reality. <br />Digital
+              technologies make it possible to make the picturesque fluidity of paintings almost
+              tangible, that’s why many works are also becoming NFT digital objects. <br />“I am
+              obsessed with the desire to depict the worlds which surround me and which I see.
+              Whenever I manage to transfer a parallel reality into this one, I feel deep
+              satisfaction, as if I managed to create a bridge between that world and this one. This
+              is the feeling of incredible pleasure.”
             </p>
             <p>
               Exhibitions and catalogues <br />
