@@ -3,7 +3,6 @@
     <v-row align="center" justify="center">
       <v-col cols="12" sm="8" md="6">
         <v-card class="backgroundCard">
-          <pre>id - {{ id }}</pre>
           <v-card-text
             style="color: white"
             class="text-center display-3 font-weight-bold"
