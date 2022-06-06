@@ -5,20 +5,20 @@
         <v-card class="backgroundCard">
           <v-card-text
             style="color: white"
-            class="text-center display-3 font-weight-bold"
-            :class="{ 'headline font-weight-bold': $vuetify.breakpoint.xs }"
+            class="text-center display-4 font-weight-bold"
+            :class="{ headline: $vuetify.breakpoint.xs }"
             >Thank you for your payment!</v-card-text
           >
           <v-card-text
             style="color: white; white-space: pre-line"
             :class="{ 'body-2': $vuetify.breakpoint.xs }"
-            class="text-center headline font-weight-bold"
-            >You have acquired a picture of Nadezhda Navrotskaya</v-card-text
+            class="text-center display-2 font-weight-bold"
+            >You have acquired a picture of Nadzeya Naurotskaya</v-card-text
           >
           <v-card-text
             style="color: white; white-space: pre-line"
             :class="{ 'body-2': $vuetify.breakpoint.xs }"
-            class="text-center headline font-weight-bold"
+            class="text-center display-2 font-weight-bold"
             >For delivery, we will contact you by email within 24 hours.</v-card-text
           >
           <v-card-actions>
