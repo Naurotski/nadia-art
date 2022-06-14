@@ -2,11 +2,9 @@
   <v-navigation-drawer v-model="drawer" right fixed temporary>
     <v-list>
       <v-list-item
-        v-for="(link, i) in links"
-        :key="i"
-        :to="{
-          name: link
-        }"
+        v-for="{ link, path } in links"
+        :key="link"
+        :to="path"
         active-class="primary--text font-weight-bold"
         class="subtitle-1"
         exact
@@ -31,14 +29,15 @@
 </template>
 
 <script>
-// Utilities
-import { mapState } from 'vuex'
-
 export default {
   name: 'CoreDrawer',
-
+  props: {
+    links: {
+      type: Array,
+      required: true
+    }
+  },
   computed: {
-    ...mapState(['links']),
     drawer: {
       get() {
         return this.$store.state.drawer

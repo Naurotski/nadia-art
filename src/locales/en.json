@@ -1,3 +1,25 @@
 {
-  "message": "hello i18n !!"
+  "common": {
+    "loadMoreWorks": "Load More Works",
+    "buyNFT": "buy NFT",
+    "buyPainting": "buy painting",
+    "buy": "buy"
+  },
+  "core": {
+    "links": {
+      "home": "Home",
+      "about": "About",
+      "gallery": "Gallery",
+      "shop": "Shop",
+      "contact": "Contact"
+    }
+  },
+  "contact": {
+    "sendMessage": "Send Message",
+    "messageSent": "Message sent",
+    "yourMessage": "Your Message",
+    "yourEmail": "Your Email",
+    "yourName": "Your Name",
+    "title": "Title"
+  }
 }

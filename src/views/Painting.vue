@@ -82,7 +82,7 @@
               color="red"
               target="_blank"
               :href="painting.linkNft"
-              >buy NFT</v-btn
+              >{{ $t('common.buyNFT') }}</v-btn
             >
           </v-card-actions>
         </v-col>

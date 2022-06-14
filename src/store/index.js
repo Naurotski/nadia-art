@@ -13,7 +13,6 @@ const db = getDatabase()
 export default new Vuex.Store({
   state: {
     drawer: false,
-    links: ['Home', 'About', 'Gallery', 'Shop', 'Contact'],
     paintings: [],
     categories: ['Visible World', 'With a Secret', 'Objects'],
     filter: 'Visible World',

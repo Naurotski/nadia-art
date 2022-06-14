@@ -1,7 +1,7 @@
 <template>
   <v-app>
-    <core-app-bar />
-    <core-drawer />
+    <core-app-bar :links="links" />
+    <core-drawer :links="links" />
     <v-main>
       <router-view v-slot="{ Component }">
         <keep-alive :max="3">
@@ -38,6 +38,17 @@ export default {
     Snackbars: () => import('@/components/core/Snackbar'),
     FloatingButton: () => import('@/components/FloatingButton'),
     SnackbarServiceWorker: () => import('@/components/SnackbarServiceWorker')
+  },
+  computed: {
+    links() {
+      return [
+        { link: this.$t('core.links.home'), path: '/' },
+        { link: this.$t('core.links.about'), path: '/about' },
+        { link: this.$t('core.links.gallery'), path: '/gallery' },
+        { link: this.$t('core.links.shop'), path: '/shop' },
+        { link: this.$t('core.links.contact'), path: '/contact' }
+      ]
+    }
   }
 }
 </script>

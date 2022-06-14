@@ -2,14 +2,14 @@
   <v-dialog v-model="dialog" persistent max-width="800px">
     <template v-slot:activator="{ on }">
       <slot :on="on" name="button"
-        ><v-btn :x-small="$vuetify.breakpoint.xs" text color="red" v-on="on"
-          >buy painting</v-btn
-        ></slot
+        ><v-btn :x-small="$vuetify.breakpoint.xs" text color="red" v-on="on">{{
+          $t('common.buyPainting')
+        }}</v-btn></slot
       >
     </template>
     <v-card>
       <v-card-title>
-        <span style="word-break: normal" class="headline">{{ painting.title }}</span>
+        <span style="word-break: normal" class="text-h3">{{ painting.title }}</span>
       </v-card-title>
       <slot name="text">
         <v-card-text
@@ -130,7 +130,7 @@
           :disabled="!valid"
           color="#FB8C00"
           @click="payStripe"
-          >buy</v-btn
+          >{{ $t('common.buy') }}</v-btn
         >
       </v-card-actions>
     </v-card>

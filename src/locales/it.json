@@ -1,8 +1,25 @@
 {
   "common": {
-
+    "loadMoreWorks": "Carica più opere",
+    "buyNFT": "Acquista NFT",
+    "buyPainting": "Acquista quest'opera",
+    "buy": "Acquista"
   },
   "core": {
-    "links": "Home | About | Gallery | Shop | Contact"
+    "links": {
+      "home": "Home",
+      "about": "Bio",
+      "gallery": "Opere",
+      "shop": "Shop",
+      "contact": "Contatti"
+    }
+  },
+  "contact": {
+    "sendMessage": "Inviare un messaggio",
+    "messageSent": "Messaggio inviato",
+    "yourMessage": "Lascia un messaggio",
+    "yourEmail": "Il tuo indirizzo email",
+    "yourName": "Il tuo nome",
+    "title": "Titolo"
   }
 }

@@ -1,6 +1,7 @@
 <template>
   <v-fab-transition>
     <v-btn
+      class="primary"
       v-show="visible"
       tr
       color="#c4c4c4"

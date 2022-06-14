@@ -37,7 +37,7 @@
                   <v-text-field
                     v-model="userName"
                     flat
-                    label="Your Name"
+                    :label="$t('contact.yourName')"
                     type="text"
                     solo
                     :rules="userDataRules"
@@ -50,7 +50,7 @@
                   <v-text-field
                     v-model="userEmail"
                     flat
-                    label="Your Email"
+                    :label="$t('contact.yourEmail')"
                     solo
                     type="email"
                     :rules="emailRules"
@@ -63,7 +63,7 @@
                   <v-text-field
                     v-model="subject"
                     flat
-                    label="Your Title"
+                    :label="$t('contact.title')"
                     solo
                     type="text"
                     :rules="titleRules"
@@ -73,7 +73,13 @@
 
               <v-col cols="12">
                 <v-sheet>
-                  <v-textarea v-model="text" flat label="Your Message" solo :rules="dialogRules" />
+                  <v-textarea
+                    v-model="text"
+                    flat
+                    :label="$t('contact.yourMessage')"
+                    solo
+                    :rules="dialogRules"
+                  />
                 </v-sheet>
               </v-col>
             </v-row>
@@ -87,11 +93,13 @@
               color="black"
               x-large
             >
-              Send Message
+              {{ $t('contact.sendMessage') }}
             </v-btn>
           </v-form>
           <v-overlay :absolute="absolute" :opacity="opacity" :value="overlay">
-            <v-btn text color="orange lighten-2" @click="overlay = false"> Message sent </v-btn>
+            <v-btn text color="orange lighten-2" @click="overlay = false">
+              {{ $t('contact.messageSent') }}</v-btn
+            >
           </v-overlay>
         </v-col>
       </v-row>

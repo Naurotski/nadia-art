@@ -20,7 +20,7 @@
       v-if="paginatedPictures.length < listPictures.length"
       class="white py-12 mx-n3 text-center"
     >
-      <v-btn text @click="page++"> Load More Works </v-btn>
+      <v-btn text @click="page++">{{ $t('common.loadMoreWorks') }}</v-btn>
     </v-responsive>
   </div>
 </template>
