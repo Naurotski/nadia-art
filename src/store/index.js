@@ -14,7 +14,8 @@ export default new Vuex.Store({
   state: {
     drawer: false,
     paintings: [],
-    categories: ['Visible World', 'With a Secret', 'Objects'],
+    categories: ['Visible World', 'With a Secret', 'Objects', 'test'],
+    categoriesIt: ['Mondo Visibile', 'Con un Segreto', 'Oggetti', 'test'],
     filter: 'Visible World',
     error: null,
     loading: false,
@@ -41,7 +42,7 @@ export default new Vuex.Store({
         if (a.id > b.id) return -1
       })
     },
-    changeFilter: (state, category) => (state.filter = category),
+    changeCategory: (state, category) => (state.filter = category),
     setError: (state, payload) => (state.error = payload),
     clearError: (state) => (state.error = null),
     setLoading: (state, payload) => (state.loading = payload),

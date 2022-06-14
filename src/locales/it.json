@@ -3,7 +3,8 @@
     "loadMoreWorks": "Carica più opere",
     "buyNFT": "Acquista NFT",
     "buyPainting": "Acquista quest'opera",
-    "buy": "Acquista"
+    "buy": "Acquista",
+    "close": "chiudi"
   },
   "core": {
     "links": {
@@ -21,5 +22,13 @@
     "yourEmail": "Il tuo indirizzo email",
     "yourName": "Il tuo nome",
     "title": "Titolo"
+  },
+  "gallery": {
+    "categories": {
+      "Visible World": "Mondo Visibile",
+      "With a Secret": "Con un Segreto",
+      "Objects": "Oggetti",
+      "test": "test"
+    }
   }
 }

@@ -9,7 +9,10 @@
     </template>
     <v-card>
       <v-card-title>
-        <span style="word-break: normal" class="text-h3">{{ painting.title }}</span>
+        <span style="word-break: normal" class="text-h3"
+          >{{ painting.title }}
+          <p class="text-h6">{{ price }}</p></span
+        >
       </v-card-title>
       <slot name="text">
         <v-card-text
@@ -122,8 +125,12 @@
           >To process the payment you will be redirected to the Stripe platform page</v-card-text
         >
         <v-spacer />
-        <v-btn :x-small="$vuetify.breakpoint.xs" color="blue darken-1" text @click="dialog = false"
-          >close</v-btn
+        <v-btn
+          :x-small="$vuetify.breakpoint.xs"
+          color="blue darken-1"
+          text
+          @click="dialog = false"
+          >{{ $t('common.close') }}</v-btn
         >
         <v-btn
           :x-small="$vuetify.breakpoint.xs"

@@ -3,7 +3,7 @@
     <transition-group appear name="fadeGroup" mode="out-in">
       <v-filter key="abc" />
       <section key="a" id="intro" class="text-center mb-12 mx-3">
-        <h1 class="display-2 font-weight-light mb-8">{{ filter }}</h1>
+        <h1 class="display-2 font-weight-light mb-8">{{ $t(`gallery.categories.${filter}`) }}</h1>
         <v-responsive
           v-if="filter === 'Visible World'"
           class="mx-auto subtitle-1 grey--text"

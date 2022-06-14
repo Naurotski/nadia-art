@@ -15,7 +15,7 @@
           :class="{ primary: tab === filter }"
           class="ml-1"
         >
-          {{ tab }}
+          {{ $t(`gallery.categories.${tab}`) }}
         </v-btn>
       </div>
     </v-expand-transition>
@@ -36,7 +36,7 @@ export default {
   },
   methods: {
     changeCategory(category) {
-      this.$store.commit('changeFilter', category)
+      this.$store.commit('changeCategory', category)
     }
   }
 }
