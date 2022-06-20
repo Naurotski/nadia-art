@@ -4,7 +4,7 @@
       <v-row v-if="painting">
         <v-col cols="12" sm="8" md="8">
           <v-card flat tile>
-            <v-window class="cursor_pointer" v-model="onBoarding" style="background-color: #eceff1">
+            <v-window class="cursor_pointer" v-model="onBoarding">
               <v-window-item
                 ><v-img
                   contain
@@ -22,7 +22,7 @@
                 /></v-window-item>
               </template>
             </v-window>
-            <v-card-actions class="justify-space-between">
+            <v-card-actions v-if="length" class="justify-space-between">
               <v-btn text @click="prev">
                 <v-icon>mdi-chevron-left</v-icon>
               </v-btn>
