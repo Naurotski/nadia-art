@@ -4,18 +4,18 @@
       <v-row v-if="painting">
         <v-col cols="12" sm="8" md="8">
           <v-card flat tile>
-            <v-window class="cursor_pointer" v-model="onBoarding">
+            <v-window class="cursor_pointer" v-model="onBoarding" :style="backgroundColor">
               <v-window-item
                 ><v-img
                   contain
-                  :height="$vuetify.breakpoint.xs ? '500px' : '600px'"
+                  :height="$vuetify.breakpoint.xs ? '480px' : '600px'"
                   :src="painting.imageSrc"
                   @click.stop="dialog = true"
               /></v-window-item>
               <template v-if="painting.imageBlockSrc">
                 <v-window-item v-for="imageSrc in painting.imageBlockSrc" :key="imageSrc">
                   <v-img
-                    :height="$vuetify.breakpoint.xs ? '500px' : '600px'"
+                    :height="$vuetify.breakpoint.xs ? '480px' : '600px'"
                     contain
                     :src="imageSrc"
                     @click.stop="dialog = true"
@@ -169,6 +169,9 @@ export default {
     },
     length() {
       return this.painting.imageBlockSrc ? this.painting.imageBlockSrc.length + 1 : 0
+    },
+    backgroundColor() {
+      return this.$vuetify.breakpoint.xs ? 'background-color: #eceff1' : 'background-color: white'
     }
   },
   created() {
