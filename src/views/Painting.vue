@@ -8,14 +8,14 @@
               <v-window-item
                 ><v-img
                   contain
-                  :height="$vuetify.breakpoint.xs ? '480px' : '600px'"
+                  :height="$vuetify.breakpoint.xs ? '450px' : '600px'"
                   :src="painting.imageSrc"
                   @click.stop="dialog = true"
               /></v-window-item>
               <template v-if="painting.imageBlockSrc">
                 <v-window-item v-for="imageSrc in painting.imageBlockSrc" :key="imageSrc">
                   <v-img
-                    :height="$vuetify.breakpoint.xs ? '480px' : '600px'"
+                    :height="$vuetify.breakpoint.xs ? '450px' : '600px'"
                     contain
                     :src="imageSrc"
                     @click.stop="dialog = true"
