@@ -2,7 +2,7 @@
   <div v-scroll="onScroll" class="v-gallery">
     <!--    <v-filter />-->
     <v-container :fluid="!isScrolling" class="transition-swing">
-      <v-row :no-gutters="!isScrolling" class="transition-swing mx-n4">
+      <v-row :no-gutters="!isScrolling" class="transition-swing mx-n3">
         <v-col
           v-for="pic in paginatedPictures"
           :key="pic.imageSrc"
