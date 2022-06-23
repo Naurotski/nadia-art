@@ -1,5 +1,5 @@
 <template>
-  <v-navigation-drawer v-model="drawer" right fixed temporary>
+  <v-navigation-drawer v-model="drawer" right fixed temporary app>
     <v-list>
       <v-list-item
         v-for="{ link, path } in links"

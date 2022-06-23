@@ -1,5 +1,5 @@
 <template>
-  <v-container id="home" class="pt-12 pb-0 px-0" fluid tag="section">
+  <v-container id="home" class="pb-0 px-0" fluid tag="section">
     <transition-group appear name="fadeGroup" mode="out-in">
       <section key="a" id="intro" class="text-center mb-12 mx-3">
         <h1 class="display-2 font-weight-light mb-8">Shop</h1>
@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import { mapState, mapGetters } from 'vuex'
+import { mapState } from 'vuex'
 export default {
   name: 'Shop',
   metaInfo: {
@@ -39,7 +39,6 @@ export default {
   },
   computed: {
     ...mapState(['paintings']),
-    ...mapGetters(['filteredPaintings']),
     shopListPaintings() {
       return this.paintings.filter((value) => value.price.split(' ')[0] === '€')
     }
