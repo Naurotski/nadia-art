@@ -1,7 +1,7 @@
 <template>
   <v-container id="home" class="pb-0 px-0" fluid tag="section">
     <transition-group appear name="fadeGroup" mode="out-in">
-      <v-filter key="abc" />
+      <v-filter :categories="categories" key="abc" />
       <Paintings key="b" :listPictures="sortPaintings" />
     </transition-group>
   </v-container>
@@ -37,6 +37,30 @@ export default {
         if (a.index === b.index) return 0
         if (a.index > b.index) return 1
       })
+    },
+    categories() {
+      return [
+        {
+          id: 'Visible World',
+          category: this.$t('categories.category.VisibleWorld'),
+          description: this.$t('categories.description.VisibleWorld')
+        },
+        {
+          id: 'With a Secret',
+          category: this.$t('categories.category.WithASecret'),
+          description: this.$t('categories.description.WithASecret')
+        },
+        {
+          id: 'Objects',
+          category: this.$t('categories.category.Objects'),
+          description: this.$t('categories.description.Objects')
+        },
+        {
+          id: 'test',
+          category: this.$t('categories.category.test'),
+          description: this.$t('categories.description.test')
+        }
+      ]
     }
   }
 }

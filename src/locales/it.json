@@ -23,12 +23,18 @@
     "yourName": "Il tuo nome",
     "title": "Titolo"
   },
-  "gallery": {
-    "categories": {
-      "Visible World": "Mondo Visibile",
-      "With a Secret": "Con un Segreto",
+  "categories": {
+    "category": {
+      "VisibleWorld": "Mondo Visibile",
+      "WithASecret": "Con un Segreto",
       "Objects": "Oggetti",
-      "test": "test"
+      "test": "testsss"
+    },
+    "description": {
+      "VisibleWorld": "Qui puoi vedere le opere d'arte di anni diversi. In ogni dipinto c'è un mondo visibile. Ma dietro ogni immagine c'è qualcosa in più di quello che può incontrare i tuoi occhi. Ogni tela è una transizione verso un punto tra i mondi in cui i confini sono cancellati e le narrazioni si dissolvono. Lo spettatore si immerge nel proprio inconscio, in uno stato di \"qui e non da nessuna parte.\" Questa è l'esperienza di vivere libero da qualsiasi restrizione.",
+      "WithASecret": "Questi dipinti hanno due lati. Il lato anteriore è un paesaggio o un ritratto familiare. Ma c'è sempre una piccola finestra con il vetro. In cui puoi guardare. E vedere cosa c'è lì. Dall'altro lato... Solo il proprietario del dipinto sa cosa c'è sul retro. Questo è il loro segreto personale. \n \n Tocca il taglio sulla tela, tocca il pezzo di vetro colorato, gira la tela. Una piccola azione e sarai oltre realtà visibile. La collezione \"With a Secret\" comprende le opere dell'artista, create all'intersezione di tecniche e pratiche. Questo non solo arricchisce il linguaggio visivo, ma offre anche a ciascuno la propria esperienza unica di coinvolgimento interattivo con la pittura.",
+      "Objects": "L'autore va oltre la tela. Vetrate e mosaici, le sculture a mosaico diventano oggetti d'arte indipendenti. Raccontano più delle immagini, ma rimangono nello stesso paradigma: ti permettono di vedere significati nascosti. È solo questo momento in cui il volume ti consente di vedere molto di più rispetto alla tela.",
+      "test": "Qui puoi vedere le opere d'arte di diversi anni. In ogni dipinto c'è un mondo visibile. Ma dietro ogni immagine, c'è qualcosa di più di quello che può incontrare i tuoi occhi. Ogni tela è una transizione"
     }
   }
 }

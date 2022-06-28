@@ -75,20 +75,6 @@
               allow="accelerometer; fullscreen; autoplay; encrypted-media; gyroscope; picture-in-picture"
             />
           </v-card-actions>
-          <v-card-actions v-for="(image, index) in paintingI18n.imageBlockSrc" :key="index">
-            <v-img :src="image" />
-          </v-card-actions>
-          <v-card-actions>
-            <v-btn
-              v-if="paintingI18n.imageBlockSrc && paintingI18n.imageBlockSrc.length"
-              :x-small="$vuetify.breakpoint.xs"
-              text
-              color="primary"
-              to="/gallery"
-            >
-              <v-icon :x-small="$vuetify.breakpoint.xs" right>mdi-arrow-left</v-icon>back</v-btn
-            >
-          </v-card-actions>
         </v-col>
         <v-col cols="12" sm="4" md="4">
           <v-card-title style="word-break: normal" v-text="paintingI18n.title" />

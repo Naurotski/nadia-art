@@ -1,7 +1,7 @@
 <template>
   <v-app-bar id="core-app-bar" app color="white" elevate-on-scroll height="96">
-    <v-row>
-<!--      <div class="d-flex align-center">-->
+    <v-row class="mx-auto">
+      <!--      <div class="d-flex align-center">-->
       <!--        <div class="d-flex align-center">-->
       <!--          <v-img-->
       <!--            :src="require('@/assets/logo.png')"-->

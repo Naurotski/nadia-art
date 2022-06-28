@@ -7,7 +7,7 @@
     </div>
     <v-expand-transition>
       <v-tabs v-model="tab" v-if="showTabs" value="3" centered show-arrows center-active>
-        <v-tab v-for="{ category } in categories" :key="category" @click="changeCategory(category)">
+        <v-tab v-for="{ id, category } in categories" :key="category" @click="changeCategory(id)">
           {{ category }}
         </v-tab>
       </v-tabs>
@@ -32,20 +32,25 @@
 import { mapState } from 'vuex'
 export default {
   name: 'VFilter',
-
+  props: {
+    categories: {
+      type: Array,
+      required: true
+    }
+  },
   data: () => ({
     showTabs: true,
     tab: null
   }),
   computed: {
-    ...mapState(['categories', 'filter'])
+    ...mapState(['filter'])
   },
   mounted() {
-    this.tab = this.categories.findIndex((item) => item.category === this.filter)
+    this.tab = this.categories.findIndex((item) => item.id === this.filter)
   },
   methods: {
     changeCategory(category) {
-      this.$store.commit('changeFilter', category)
+      this.$store.commit('changeCategory', category)
     }
   }
 }
