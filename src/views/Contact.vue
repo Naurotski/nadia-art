@@ -15,14 +15,15 @@
     <transition appear name="fadeGroup" mode="out-in">
       <v-row class="ma-0" justify="center">
         <v-col cols="12" md="4">
-          <h1 class="display-1 mb-8 font-weight-bold">Contact Info:</h1>
+          <h1 class="display-1 mb-8 font-weight-bold">{{ $t('contact.title') }}</h1>
 
           <div class="mb-8">
-            Should you have any questions, please send us an e-mail or complete the enquiry form and
-            Nadzeya will be in touch shortly.
+            {{ $t('contact.description') }}
           </div>
 
-          <div class="mb-4"><strong>Address</strong> 56010 Ghezzano PI, via Petrarca, 17</div>
+          <div class="mb-4">
+            <strong>{{ $t('contact.address') }}</strong> 56010 Ghezzano PI, via Petrarca, 17
+          </div>
 
           <div class="mb-4"><strong>Phone</strong> +39 392 5568834</div>
 
@@ -63,7 +64,7 @@
                   <v-text-field
                     v-model="subject"
                     flat
-                    :label="$t('contact.title')"
+                    :label="$t('contact.titleEmail')"
                     solo
                     type="text"
                     :rules="titleRules"

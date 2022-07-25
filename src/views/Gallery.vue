@@ -54,11 +54,6 @@ export default {
           id: 'Objects',
           category: this.$t('categories.category.Objects'),
           description: this.$t('categories.description.Objects')
-        },
-        {
-          id: 'test',
-          category: this.$t('categories.category.test'),
-          description: this.$t('categories.description.test')
         }
       ]
     }

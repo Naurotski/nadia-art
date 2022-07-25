@@ -21,7 +21,10 @@
     "yourMessage": "Your Message",
     "yourEmail": "Your Email",
     "yourName": "Your Name",
-    "title": "Title"
+    "titleEmail": "Title",
+    "title": "Contact Info:",
+    "description": "Should you have any questions, please send us an e-mail or complete the enquiry form and Nadzeya will be in touch shortly.",
+    "address": "Address"
   },
   "categories": {
     "category": {
@@ -36,5 +39,7 @@
       "Objects": "The author goes beyond the canvas. Stained-glass artworks and mosaics, mosaic sculptures become independent art objects. They tell more than pictures, but remain in the same paradigm: they allow you to see hidden meanings. It’s only this time when the volume allows you to see much more than the canvas does.",
       "test": "Here you can see the artworks from different years. In each painting, there is a visible world. But behind each image, there is something more than can meet your eyes. Each canvas is a transition."
     }
-  }
+  },
+  "about": "A self-taught artist. She left a successful career of a psychotherapist, osteopath and homeopath and gradually focused exclusively on art. She first mastered painting and photography on her own, then it was working with glass, mosaics and sculpture. The works are increasingly dominated by mixed media art technique that shows the search for a way to reflect the world seen by the artist. Glass and cement are embedded in canvases, portal paintings and portal sculptures appear. The works seem to lead to other realities. \n \"I’m getting to understand more and more that the words invented by people are too poor to reflect sensory experience. Only through images, colors, lines and elusive invisible spirit can one convey their experience. I am completely disappointed in psychotherapy – it's like an artificial attempt to manipulate the deep. Art has a much deeper and more healing effect.\" \n Hidden worlds break through the artist's works into our visible life: through vibrating brushstrokes, trembling images, through stained glass, through mosaics left in parks and on paths that evoke the feeling of a “break” in reality. \n Digital technologies make it possible to make the picturesque fluidity of paintings almost tangible, that’s why many works are also becoming NFT digital objects. \n “I am obsessed with the desire to depict the worlds which surround me and which I see. Whenever I manage to transfer a parallel reality into this one, I feel deep satisfaction, as if I managed to create a bridge between that world and this one. This is the feeling of incredible pleasure.” \n \n Exhibitions: \n \n May 2022 - collective exhibition «Ukraine and Russia, the Art for Freedom» (Pisa, Italy) \n February 2022 – virtual exhibition «Gubbio With Love», Associazione culturale La Medusa, Italia \n October 12 - November 11 2021 - Intimists 9 «Wonderful world», La Fenice Art Gallery (Hong Kong) \n August 2021 - virtual exhibition of Belarusian contemporary art «2020», online gallery of the European Humanities University (Vilnius, Lithuania) \n July 2020 - plein air and exhibition «Il balletto» (Nervi, Genoa, Italy) \n October 2019 - plein air and exhibition «La bellezza del tempo 2» (Nervi, Genoa, Italy) \n July 2019 - plein air and exhibition «NERVI. En PLEIN AIR» (Nervi, Genoa, Italy) \n May 2019 - collective exhibition of botanical photography Fito-Photo 2019 (Botanical ointment of Pisa, Italy) \n November 2018 - collective exhibition «Preziosità d'Italia» (Calcinaia (PI), Italy) \n \n  Catalogues: \n\n ARTNow - May-June, 2020 \nCultural artistic almanaggo Nervi.Renaissance - Nervi, 2018/2019 \n Artisticamente n° 3 - Rome, 2018 \n\n Press",
+  "shop": " You can buy any artwork with free worldwide delivery. At a buyer’s request, a painting or a stained-glass artwork can be framed for additional fee. \n\nPlease check all the information about the packaging of artworks and delivery before confirming a purchase. All the contact options can be found in the \"Contacts\" section.\n\nUpon delivery outside the EU, for each painting, we issue accompanying documents allowing to export the art objects. This may take additional 2-3 weeks."
 }

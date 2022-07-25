@@ -3,15 +3,12 @@
     <transition-group appear name="fadeGroup" mode="out-in">
       <section key="a" id="intro" class="text-center mb-12 mx-3">
         <h1 class="display-2 font-weight-light mb-8">Shop</h1>
-        <v-responsive class="mx-auto subtitle-1 grey--text" max-width="750">
-          You can buy any artwork with free worldwide delivery. At a buyer’s request, a painting or
-          a stained-glass artwork can be framed for additional fee. <br />
-          <br />
-          Please check all the information about the packaging of artworks and delivery before
-          confirming a purchase. All the contact options can be found in the "Contacts" section.
-          <br />
-          <br />Upon delivery outside the EU, for each painting, we issue accompanying documents
-          allowing to export the art objects. This may take additional 2-3 weeks.
+        <v-responsive
+          class="mx-auto subtitle-1 grey--text"
+          max-width="750"
+          style="white-space: pre-line"
+        >
+          {{ $t('shop') }}
         </v-responsive>
       </section>
       <Paintings key="b" :listPictures="shopListPaintings" />
