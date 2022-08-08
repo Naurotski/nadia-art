@@ -52,7 +52,8 @@ export default new Vuex.Store({
     error: null,
     loading: false,
     urlHeroku: 'https://metamorfosi.herokuapp.com',
-    // urlHeroku: 'http://localhost:3000',
+    // urlHeroku: 'https://test-metamorfosi.herokuapp.com',
+    // urlHeroku: 'http://localhost:3001',
     serviceWorker: null
   },
   getters: {

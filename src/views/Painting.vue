@@ -105,12 +105,7 @@
             </template>
           </dialogue-payment-pictures>
           <v-card-actions>
-            <dialogue-payment-pictures
-              v-if="presencePrice"
-              :painting="painting"
-              :price="painting.price"
-              :goods="`pictures`"
-            />
+            <dialogue-payment-pictures v-if="presencePrice" :painting="painting" goods="pictures" />
           </v-card-actions>
           <v-card-actions>
             <v-btn
