@@ -11,18 +11,13 @@
       <v-card-title>
         <span style="word-break: normal" class="text-h3"
           >{{ painting.title }}
-          <p class="text-h6">{{ price }}</p></span
+          <p class="text-h6">{{ painting.price }}</p></span
         >
       </v-card-title>
       <slot name="text">
-        <v-card-text
-          >You can buy any artwork with free worldwide delivery. At a buyer’s request, a painting or
-          a stained-glass artwork can be framed for additional fee. <br />
-          Please check all the information about the packaging of artworks and delivery before
-          confirming a purchase. All the contact options can be found in the "Contacts" section.
-          <br />Upon delivery outside the EU, for each painting, we issue accompanying documents
-          allowing to export the art objects. This may take additional 2-3 weeks.</v-card-text
-        ></slot
+        <v-card-text style="white-space: pre-line" class="text-justify">{{
+          $t('dialoguePayment.delivery')
+        }}</v-card-text></slot
       >
       <v-card-text>
         <v-form ref="form" v-model="valid">
@@ -121,9 +116,9 @@
         </v-form>
       </v-card-text>
       <v-card-actions>
-        <v-card-text :class="{ 'caption font-weight-regular': $vuetify.breakpoint.xs }"
-          >To process the payment you will be redirected to the Stripe platform page</v-card-text
-        >
+        <v-card-text :class="{ 'caption font-weight-regular': $vuetify.breakpoint.xs }">{{
+          $t('dialoguePayment.redirect')
+        }}</v-card-text>
         <v-spacer />
         <v-btn
           :x-small="$vuetify.breakpoint.xs"

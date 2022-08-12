@@ -109,10 +109,8 @@
             <dialogue-payment-pictures
               v-if="presencePrice"
               :painting="paintingI18n"
-              :price="paintingI18n.price"
-              :goods="`pictures`"
+              goods="pictures"
             />
-            <dialogue-payment-pictures v-if="presencePrice" :painting="painting" goods="pictures" />
           </v-card-actions>
           <v-card-actions>
             <v-btn
