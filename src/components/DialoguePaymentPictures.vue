@@ -27,7 +27,7 @@
                 <v-text-field
                   v-model="localUser.firstName"
                   color="blue lighten-4"
-                  label="First Name"
+                  :label="$t('dialoguePayment.firstName')"
                   class="purple-input"
                   type="text"
                   counter
@@ -38,7 +38,7 @@
                 <v-text-field
                   v-model="localUser.lastName"
                   color="blue lighten-4"
-                  label="Last Name"
+                  :label="$t('dialoguePayment.lastName')"
                   class="purple-input"
                   type="text"
                   counter
@@ -60,7 +60,7 @@
                 <v-text-field
                   v-model="localUser.country"
                   color="blue lighten-4"
-                  label="Country"
+                  :label="$t('dialoguePayment.country')"
                   class="purple-input"
                   type="text"
                   counter
@@ -72,7 +72,7 @@
                   v-model="localUser.postalCode"
                   color="blue lighten-4"
                   class="purple-input"
-                  label="Postal Code"
+                  :label="$t('dialoguePayment.postalCode')"
                   type="text"
                   counter
                   :rules="userDataRules"
@@ -82,7 +82,7 @@
                 <v-text-field
                   v-model="localUser.city"
                   color="blue lighten-4"
-                  label="City"
+                  :label="$t('dialoguePayment.city')"
                   class="purple-input"
                   type="text"
                   counter
@@ -93,7 +93,7 @@
                 <v-text-field
                   v-model="localUser.address"
                   color="blue lighten-4"
-                  label="Address"
+                  :label="$t('dialoguePayment.address')"
                   class="purple-input"
                   type="text"
                   counter
@@ -104,7 +104,7 @@
                 <v-text-field
                   v-model="localUser.phone"
                   color="blue lighten-4"
-                  label="Phone"
+                  :label="$t('dialoguePayment.phone')"
                   class="purple-input"
                   type="tel"
                   counter
