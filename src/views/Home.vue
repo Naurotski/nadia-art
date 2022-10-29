@@ -1,7 +1,8 @@
 <template>
   <div style="height: 100vh">
     <transition appear name="fadeGroup" mode="out-in">
-      <v-img class="studios" :src="backgroundUrl" :key="backgroundUrl"></v-img>
+      <!--      <v-img class="studios" :src="backgroundUrl" :key="backgroundUrl"></v-img>-->
+      <v-img class="studios" :src="require('@/assets/blackMoon2.jpg')" />
     </transition>
   </div>
   <!--  <v-container  fluid>-->
@@ -23,7 +24,7 @@
 </template>
 
 <script>
-import { mapState, mapActions } from 'vuex'
+// import { mapState, mapActions } from 'vuex'
 export default {
   name: 'Home',
   metaInfo: {
@@ -37,33 +38,33 @@ export default {
           'Italy based artist - Double-sided images, stained glass, mosaics, sculpture - Art-objects «with a secret»'
       }
     ]
-  },
-  data: () => ({
-    painting: null,
-    timer: null,
-    backgroundUrl:
-      'https://firebasestorage.googleapis.com/v0/b/first-project-6daea.appspot.com/o/paintinds%2F-Mycj0hSYuN7gY4B4WNb?alt=media&token=77814594-32cc-4598-970f-6674badeb91e'
-  }),
-  computed: {
-    ...mapState(['paintings']),
-    carouselFilter() {
-      return this.paintings.filter((elem) => elem.promo)
-    }
-  },
-  created() {
-    if (!this.paintings.length) this.fetchPaintings()
-    let counter = 0
-    this.timer = setInterval(() => {
-      if (++counter >= this.carouselFilter.length) counter = 0
-      this.backgroundUrl = this.carouselFilter[counter].imageSrc
-    }, 8000)
-  },
-  beforeDestroy() {
-    clearInterval(this.timer)
-  },
-  methods: {
-    ...mapActions(['fetchPaintings'])
   }
+  // data: () => ({
+  //   painting: null,
+  //   timer: null,
+  //   backgroundUrl:
+  //     'https://firebasestorage.googleapis.com/v0/b/first-project-6daea.appspot.com/o/paintinds%2F-Mycj0hSYuN7gY4B4WNb?alt=media&token=77814594-32cc-4598-970f-6674badeb91e'
+  // }),
+  // computed: {
+  //   ...mapState(['paintings']),
+  //   carouselFilter() {
+  //     return this.paintings.filter((elem) => elem.promo)
+  //   }
+  // },
+  // created() {
+  //   if (!this.paintings.length) this.fetchPaintings()
+  //   let counter = 0
+  //   this.timer = setInterval(() => {
+  //     if (++counter >= this.carouselFilter.length) counter = 0
+  //     this.backgroundUrl = this.carouselFilter[counter].imageSrc
+  //   }, 8000)
+  // },
+  // beforeDestroy() {
+  //   clearInterval(this.timer)
+  // },
+  // methods: {
+  //   ...mapActions(['fetchPaintings'])
+  // }
 }
 </script>
 <style scoped lang="sass">

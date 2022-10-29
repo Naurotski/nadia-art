@@ -5,7 +5,7 @@
         <v-col cols="12" md="4">
           <v-img
             gradient="to top, rgba(0, 0, 0, .0), rgba(0, 0, 0, .0)"
-            :src="require('@/assets/IMG_8783.jpeg')"
+            :src="require('@/assets/DSC09434-9.jpg')"
           />
         </v-col>
         <v-col class="d-block d-md-flex align-center pa-6" cols="12" md="8">
